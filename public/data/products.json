@@ -1,0 +1,112 @@
+[
+    {
+        "id": "mate1",
+        "name": "Mate Colores",
+        "price": 1200,
+        "currency": "ARS",
+        "category": "section1",
+        "image": "/images/products/Mate1.webp",
+        "alt": "mate violeta",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "mate2",
+        "name": "Mate Potter",
+        "price": 500,
+        "currency": "ARS",
+        "category": "section1",
+        "image": "/images/products/Mate2.webp",
+        "alt": "mate potter",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "mate3",
+        "name": "Mate Groot",
+        "price": 800,
+        "currency": "ARS",
+        "category": "section1",
+        "image": "/images/products/Mate3.webp",
+        "alt": "mate groot",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "mates1",
+        "name": "Mates Animales",
+        "price": 700,
+        "currency": "ARS",
+        "category": "section1",
+        "image": "/images/products/Mates1.webp",
+        "alt": "mates",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "mates2",
+        "name": "Mates Feliz Día",
+        "price": 600,
+        "currency": "ARS",
+        "category": "section1",
+        "image": "/images/products/Mates2.webp",
+        "alt": "mates feliz día",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "mates3",
+        "name": "Mates Fútbol",
+        "price": 800,
+        "currency": "ARS",
+        "category": "section1",
+        "image": "/images/products/Mates3.webp",
+        "alt": "mates fútbol",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "llavero1",
+        "name": "Llavero Cumpleaños",
+        "price": 1200,
+        "currency": "ARS",
+        "category": "section2",
+        "image": "/images/products/Llavero1.webp",
+        "alt": "llavero",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "llavero2",
+        "name": "Llavero Capibara Mundial",
+        "price": 500,
+        "currency": "ARS",
+        "category": "section2",
+        "image": "/images/products/Llavero2.webp",
+        "alt": "llavero",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "insignias1",
+        "name": "Insignias SPP",
+        "price": 1200,
+        "currency": "ARS",
+        "category": "section3",
+        "image": "/images/products/Insignias1.webp",
+        "alt": "insignias",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "xmas1",
+        "name": "Globo Navidad",
+        "price": 500,
+        "currency": "ARS",
+        "category": "section3",
+        "image": "/images/products/Xmas1.webp",
+        "alt": "globo navidad",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+        "id": "xmas2",
+        "name": "Pesebre Minimalista",
+        "price": 800,
+        "currency": "ARS",
+        "category": "section3",
+        "image": "/images/products/Xmas2.webp",
+        "alt": "pesebre",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    }
+]

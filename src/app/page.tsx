@@ -1,65 +1,171 @@
-import Image from "next/image";
+'use client';
 
-export default function Home() {
+import { useEffect, useState } from 'react';
+import ProductCard from "@/components/ProductCard";
+import ProductModal from "@/components/ProductModal";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import BackToTop from "@/components/BackToTop";
+import PreviewModal from "@/components/PreviewModal";
+
+
+type Product = {
+  id: string;
+  name: string;
+  price: number;
+  currency: string;
+  description: string;
+  image: string;
+  category: string;
+};
+
+export default function Page() {
+  const [products, setProducts] = useState<Product[]>([]);
+  const [selectedProducts, setSelectedProducts] = useState<Set<string>>(new Set());
+
+  const [modalProduct, setModalProduct] = useState<Product | null>(null);
+  const [previewOpen, setPreviewOpen] = useState(false);
+
+  // Fetch products
+  useEffect(() => {
+    fetch('/data/products.json')
+      .then(res => res.json())
+      .then(data => setProducts(data))
+      .catch(err => console.error(err));
+  }, []);
+
+  // Carousel
+  const slides = [
+    '/images/hero/mates.webp',
+    '/images/hero/cockades.webp',
+    '/images/hero/aboutus.jpeg'
+
+  ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide(prev => (prev + 1) % slides.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  function toggleProduct(name: string) {
+    setSelectedProducts(prev => {
+      const copy = new Set(prev);
+      copy.has(name) ? copy.delete(name) : copy.add(name);
+      return copy;
+    });
+  }
+
+  function sendWhatsApp() {
+    if (selectedProducts.size === 0) return;
+
+    const message = encodeURIComponent(
+      "Hola! Me interesan los siguientes productos:\n- " +
+      Array.from(selectedProducts).join("\n- ")
+    );
+
+    window.open(
+      `https://wa.me/5491124834551?text=${message}`,
+      "_blank"
+    );
+  }
+
+  const categories = [
+    { id: 'section1', title: 'Mates' },
+    { id: 'section2', title: 'Llaveros' },
+    { id: 'section3', title: 'Adornos y Accesorios' },
+  ];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <main>
+
+      {/* HERO */}
+      <section className="max-w-6xl mx-auto px-4">
+
+        <div className="overflow-hidden rounded-lg">
+  <img
+    src={slides[currentSlide]}
+    alt="Hero"
+    className="w-full max-h-[450px] object-contain"
+  />
+</div>
+      </section>
+
+      <div className="flex justify-center gap-2 py-4">
+  {slides.map((_, index) => (
+    <button
+      key={index}
+      onClick={() => setCurrentSlide(index)}
+      className={`h-2.5 w-2.5 rounded-full ${
+        currentSlide === index
+          ? "bg-cyan-400"
+          : "bg-gray-500"
+      }`}
+    />
+  ))}
+</div>
+
+      {/* TITLE */}
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 className="text-center text-2xl my-8 uppercase tracking-widest">
+          Nuestro Catálogo
+        </h2>
+      </div>
+
+      {/* CATEGORIES */}
+      {categories.map(cat => (
+        <section
+          key={cat.id}
+          id={cat.id}
+          className="max-w-6xl mx-auto px-4 mb-10"
+        >
+          <h2 className="text-lg uppercase tracking-widest mb-4">
+            {cat.title}
+          </h2>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {products
+              .filter(p => p.category === cat.id)
+              .map(product => (
+                <ProductCard
+                  key={product.id}
+                  product={product}
+                  isSelected={selectedProducts.has(product.name)}
+                  onOpenModal={() => setModalProduct(product)}
+                />
+              ))}
+          </div>
+        </section>
+      ))}
+
+      {modalProduct && (
+        <ProductModal
+          product={modalProduct}
+          isSelected={selectedProducts.has(modalProduct.name)}
+          onClose={() => setModalProduct(null)}
+          onToggle={() => toggleProduct(modalProduct.name)}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      )}
+
+      <WhatsAppButton
+        count={selectedProducts.size}
+        onClick={() => setPreviewOpen(true)}
+      />
+
+      {previewOpen && (
+        <PreviewModal
+          selectedProducts={Array.from(selectedProducts)}
+          onClose={() => setPreviewOpen(false)}
+          onRemove={toggleProduct}
+          onSendWhatsApp={sendWhatsApp}
+        />
+      )}
+
+      <BackToTop activeCart={selectedProducts.size > 0} />
+
+    </main>
   );
 }
