@@ -1,13 +1,13 @@
 export default function Footer() {
     return (
-        <footer className="mt-20 border-t border-slate-800 bg-[#0F172A]">
+        <footer className="mt-20 border-t border-[#2cb7c9] bg-[#0F172A]">
             <div className="max-w-6xl mx-auto px-4 py-10">
 
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-8">
 
                     <div>
                         <h3 className="text-lg font-semibold uppercase tracking-wider text-white">
-                            Punto BAT
+                            Punto BAT 3D
                         </h3>
 
                         <p className="mt-2 text-sm text-slate-400">

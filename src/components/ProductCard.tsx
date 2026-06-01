@@ -22,35 +22,39 @@ export default function ProductCard({
     return (
         <div
             className={`
-                bg-[#0F172A]
-                border border-slate-700
-                rounded-lg
-                overflow-hidden
-                transition
-                ${isSelected ? "border-[#F4A896]" : "hover:border-slate-500"}
-            `}
+        bg-[#1E293B]
+        border border-[#2cb7c9]/20
+        rounded-lg
+        overflow-hidden
+        transition-all
+        duration-200
+        hover:border-[#2cb7c9]
+        hover:shadow-lg
+        hover:-translate-y-1
+        ${isSelected ? "border-[#F4A896] ring-1 ring-[#F4A896]" : ""}
+    `}
         >
-            <div className="aspect-square overflow-hidden bg-slate-900">
+            <div className="aspect-square overflow-hidden bg-slate-800">
                 <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover hover:scale-105 transition duration-300"
                     onClick={onOpenModal}
                 />
             </div>
 
-            <div className="p-2">
-                <h3 className="text-sm uppercase tracking-wide">
+            <div className="p-3">
+                <h3 className="text-sm uppercase tracking-wide text-slate-200">
                     {product.name}
                 </h3>
 
-                <p className="text-xs text-slate-400 mt-1">
+                <p className="text-base font-semibold text-[#f2c94c] mt-1">
                     ${product.price}
                 </p>
 
                 <button
                     onClick={onOpenModal}
-                    className="mt-3 text-xs uppercase tracking-wider text-[#F4A896]"
+                    className="mt-3 text-xs uppercase tracking-wider text-[#2cb7c9] hover:text-[#5fd3e0] transition"
                 >
                     Ver detalle
                 </button>

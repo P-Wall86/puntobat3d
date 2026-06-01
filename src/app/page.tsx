@@ -60,6 +60,7 @@ export default function Page() {
   }
 
   function sendWhatsApp() {
+    console.log("Ejecutando sendWhatsApp", selectedProducts);
     if (selectedProducts.size === 0) return;
 
     const message = encodeURIComponent(
@@ -67,10 +68,10 @@ export default function Page() {
       Array.from(selectedProducts).join("\n- ")
     );
 
-    window.open(
-      `https://wa.me/5491124834551?text=${message}`,
-      "_blank"
-    );
+    const phone = "5491124834551";
+    const url = `https://api.whatsapp.com/send?phone=${phone}&text=${message}`;
+    
+    window.open(url, "_blank");
   }
 
   const categories = [
@@ -126,7 +127,7 @@ export default function Page() {
             {cat.title}
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {products
               .filter(p => p.category === cat.id)
               .map(product => (
