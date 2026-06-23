@@ -1,59 +1,51 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Header() {
-    const [open, setOpen] = useState(false);
 
     return (
         <>
             <header className="sticky top-0 z-50 bg-[#0F172A] border-b border-[#2cb7c9]">
-                <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between relative">
+                <div className="max-w-6xl mx-auto px-4 py-3 lg:py-4">
+                    <nav>
+                        <ul className="
+                            flex
+                            justify-around
+                            text-xs
+                            sm:text-sm
+                            lg:text-base
+                            sm:text-sm
+                            tracking-widest 
+                            uppercase 
+                            text-slate-300">
+                            <li>
+                                <Link
+                                    href="#section1"
+                                    className="hover:text-[#2cb7c9]">
+                                    Mates
+                                </Link>
+                            </li>
 
-                    {/* LOGO */}
-                    <Link href="/" className="flex items-center">
-                        <Image
-                            src="/images/logo/Logo.webp"
-                            alt="Logo"
-                            width={60}
-                            height={60}
-                            className="rounded-full object-cover"
-                        />
-                    </Link>
+                            <li>
+                                <Link
+                                    href="#section2"
+                                    className="hover:text-[#2cb7c9]">
+                                    Llaveros
+                                </Link>
+                            </li>
 
-                    {/* TITLE */}
-                    <h1 className="absolute left-1/2 -translate-x-1/2 text-2xl xl:text-2xl tracking-[4px] sm:tracking-[6px] lg:tracking-[8px] font-semibold uppercase text-white">
-                        Punto BAT 3D
-                    </h1>
-
-                    {/* DESKTOP NAV */}
-                    <nav className="hidden md:block">
-                        <ul className="flex gap-8 text-xs uppercase tracking-widest text-slate-400">
-                            <li><Link href="#section1" className="text-slate-200 font-semibold hover:text-[#2cb7c9]">Mates</Link></li>
-                            <li><Link href="#section1" className="text-slate-200 font-semibold hover:text-[#2cb7c9]">Llaveros</Link></li>
-                            <li><Link href="#section1" className="text-slate-200 font-semibold hover:text-[#2cb7c9]">Adornos</Link></li>
+                            <li>
+                                <Link
+                                    href="#section3"
+                                    className="hover:text-[#2cb7c9]">
+                                    Adornos
+                                </Link>
+                            </li>
                         </ul>
                     </nav>
-
-                    {/* BURGER */}
-                    <button onClick={() => setOpen(!open)} className="md:hidden text-[#2cb7c9] text-2xl">
-                        ☰
-                    </button>
                 </div>
             </header>
-
-            {/* MOBILE NAV */}
-            {open && (
-                <nav className="md:hidden fixed top-[72px] left-0 w-full bg-[#0F172A] border-t border-white/10 z-40 text-center py-6">
-                    <ul className="space-y-4 uppercase text-sm tracking-widest text-slate-200">
-                        <li><Link href="#section1" onClick={() => setOpen(false)}>Mates</Link></li>
-                        <li><Link href="#section2" onClick={() => setOpen(false)}>Llaveros</Link></li>
-                        <li><Link href="#section3" onClick={() => setOpen(false)}>Adornos</Link></li>
-                    </ul>
-                </nav>
-            )}
         </>
     );
 }

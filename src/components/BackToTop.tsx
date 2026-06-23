@@ -31,16 +31,21 @@ export default function BackToTop({ activeCart }: Props) {
             onClick={scrollToTop}
             className={`
                 fixed
-                bottom-[107px]
-                right-[38px]
+                bottom-[85px]
+                right-7
+                lg:bottom-[110px]
+                lg:right-9.5
                 z-[1000]
-                w-[45px]
-                h-[45px]
+                w-10
+                h-10
+                sm:w-[45px]
+                sm:h-[45px]
                 rounded-full
                 flex
                 items-center
                 justify-center
-                text-xl
+                text-lg
+                sm:text-xl
                 shadow-lg
                 transition
                 ${

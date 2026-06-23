@@ -34,7 +34,7 @@ export default function Page() {
   }, []);
 
   // Carousel
-  const slides = [
+  /* const slides = [
     '/images/hero/mates.webp',
     '/images/hero/cockades.webp',
     '/images/hero/aboutus.jpeg'
@@ -49,7 +49,7 @@ export default function Page() {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, []); */
 
   function toggleProduct(name: string) {
     setSelectedProducts(prev => {
@@ -70,7 +70,7 @@ export default function Page() {
 
     const phone = "5491124834551";
     const url = `https://api.whatsapp.com/send?phone=${phone}&text=${message}`;
-    
+
     window.open(url, "_blank");
   }
 
@@ -83,40 +83,45 @@ export default function Page() {
   return (
     <main>
 
-      {/* HERO */}
+      {/*
       <section className="max-w-6xl mx-auto px-4">
 
         <div className="overflow-hidden rounded-lg">
-  <img
-    src={slides[currentSlide]}
-    alt="Hero"
-    className="w-full max-h-[450px] object-contain"
-  />
-</div>
+          <img
+            src={slides[currentSlide]}
+            alt="Hero"
+            className="w-full max-h-[450px] object-contain"
+          />
+        </div>
       </section>
 
       <div className="flex justify-center gap-2 py-4">
-  {slides.map((_, index) => (
-    <button
-      key={index}
-      onClick={() => setCurrentSlide(index)}
-      className={`h-2.5 w-2.5 rounded-full ${
-        currentSlide === index
-          ? "bg-cyan-400"
-          : "bg-gray-500"
-      }`}
-    />
-  ))}
-</div>
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`h-2.5 w-2.5 rounded-full ${currentSlide === index
+                ? "bg-cyan-400"
+                : "bg-gray-500"
+              }`}
+          />
+        ))}
+      </div>*/}
 
-      {/* TITLE */}
+      <section className="w-full lg:max-w-6xl lg:mx-auto">
+          <img
+            src="/images/hero/Hero1.jpg"
+            alt="Punto BAT 3D - Soluciones en impresión 3D"
+            className="w-full lg:max-h-[450px] object-contain"
+          />
+      </section>
+
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-center text-2xl my-8 uppercase tracking-widest">
           Nuestro Catálogo
         </h2>
       </div>
 
-      {/* CATEGORIES */}
       {categories.map(cat => (
         <section
           key={cat.id}

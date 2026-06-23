@@ -21,7 +21,7 @@ export default function WhatsAppButton({
                         : "/images/logo/Cart1.webp"
                 }
                 alt="Consulta WhatsApp"
-                className="w-20 h-auto"
+                className="w-14 sm:w-16 lg:w-20 h-auto"
             />
 
             {hasProducts && (
@@ -30,14 +30,17 @@ export default function WhatsAppButton({
             absolute
             -top-1
             -right-1
-            min-w-5
-            h-5
             px-1
             rounded-full
+            min-w-4
+            h-4
+            sm:h-5
+            sm:min-w-5
+            sm:text-xs
+            text-[10px]
             flex
             items-center
             justify-center
-            text-xs
             font-bold
             bg-pink-300
             text-slate-900">
