@@ -6,6 +6,7 @@ import ProductModal from "@/components/ProductModal";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import BackToTop from "@/components/BackToTop";
 import PreviewModal from "@/components/PreviewModal";
+import PromoCarousel from "@/components/PromoCarousel";
 
 
 type Product = {
@@ -32,24 +33,6 @@ export default function Page() {
       .then(data => setProducts(data))
       .catch(err => console.error(err));
   }, []);
-
-  // Carousel
-  /* const slides = [
-    '/images/hero/mates.webp',
-    '/images/hero/cockades.webp',
-    '/images/hero/aboutus.jpeg'
-
-  ];
-
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide(prev => (prev + 1) % slides.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []); */
 
   function toggleProduct(name: string) {
     setSelectedProducts(prev => {
@@ -83,38 +66,23 @@ export default function Page() {
   return (
     <main>
 
-      {/*
-      <section className="max-w-6xl mx-auto px-4">
-
-        <div className="overflow-hidden rounded-lg">
-          <img
-            src={slides[currentSlide]}
-            alt="Hero"
-            className="w-full max-h-[450px] object-contain"
-          />
-        </div>
+      <section className="
+  w-full
+  lg:max-w-4xl
+  mx-auto
+  overflow-hidden
+">
+        <img
+          src="/images/hero/HeroMobile.jpg"
+          alt="Punto BAT 3D - Soluciones en impresión 3D"
+          className="
+            w-full
+            object-contain
+        "
+        />
       </section>
 
-      <div className="flex justify-center gap-2 py-4">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`h-2.5 w-2.5 rounded-full ${currentSlide === index
-                ? "bg-cyan-400"
-                : "bg-gray-500"
-              }`}
-          />
-        ))}
-      </div>*/}
-
-      <section className="w-full lg:max-w-6xl lg:mx-auto">
-          <img
-            src="/images/hero/Hero1.jpg"
-            alt="Punto BAT 3D - Soluciones en impresión 3D"
-            className="w-full lg:max-h-[450px] object-contain"
-          />
-      </section>
+      <PromoCarousel />
 
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-center text-2xl my-8 uppercase tracking-widest">
@@ -126,7 +94,7 @@ export default function Page() {
         <section
           key={cat.id}
           id={cat.id}
-          className="max-w-6xl mx-auto px-4 mb-10"
+          className="max-w-6xl mx-auto px-4 mb-10 scroll-mt-20"
         >
           <h2 className="text-lg uppercase tracking-widest mb-4">
             {cat.title}

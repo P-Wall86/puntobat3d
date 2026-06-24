@@ -31,7 +31,7 @@ export default function ProductCard({
         hover:border-[#2cb7c9]
         hover:shadow-lg
         hover:-translate-y-1
-        ${isSelected ? "border-[#F4A896] ring-1 ring-[#F4A896]" : ""}
+        ${isSelected ? "border-[#f4a261] ring-1 ring-[#F4A896]" : ""}
     `}
         >
             <div className="aspect-square overflow-hidden bg-slate-800">
