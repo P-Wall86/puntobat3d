@@ -73,7 +73,7 @@ export default function Page() {
   overflow-hidden
 ">
         <img
-          src="/images/hero/HeroMobile.jpg"
+          src="/images/hero/Hero.webp"
           alt="Punto BAT 3D - Soluciones en impresión 3D"
           className="
             w-full
