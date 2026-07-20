@@ -67,7 +67,25 @@ md:max-w-[650px]
 
                 <button
                     onClick={onClose}
-                    className="absolute top-2 right-2 text-sm text-slate-400 hover:text-[#2cb7c9] z-20 bg-slate-900/80 rounded-full w-5 h-5 flex items-center justify-center transition-colors border border-slate-700/50"
+                    className="
+        absolute
+        top-2
+        right-2
+        z-20
+        flex
+        h-5
+        w-5
+        items-center
+        justify-center
+        rounded-full
+        border
+        border-slate-700/50
+        bg-slate-900/80
+        text-sm
+        text-slate-400
+        transition-colors
+        hover:text-[#2cb7c9]
+    "
                 >
                     ×
                 </button>

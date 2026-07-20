@@ -39,26 +39,60 @@ export default function PreviewModal({
             onClick={onClose}
         >
             <div
-                className="relative w-[90vw] max-w-md rounded-2xl bg-[#1E293B] shadow-2xl border border-[#2cb7c9]/30"
+                className="
+    relative
+    w-[82vw]
+    max-w-md
+    rounded-2xl
+    bg-[#1E293B]
+    border
+    border-[#2cb7c9]/20
+    shadow-2xl
+    overflow-hidden
+"
                 onClick={(e) => e.stopPropagation()}
             >
                 <button
                     onClick={onClose}
-                    className="absolute right-4 top-4 text-2xl font-light text-slate-400 transition hover:text-[#2cb7c9]"
+                    className="
+        absolute
+        top-2
+        right-2
+        z-20
+        flex
+        h-5
+        w-5
+        items-center
+        justify-center
+        rounded-full
+        border
+        border-slate-700/50
+        bg-slate-900/80
+        text-sm
+        text-slate-400
+        transition-colors
+        hover:text-[#2cb7c9]
+    "
                 >
                     ×
                 </button>
 
-                <div className="p-6">
+                <div className="
+    p-3
+    sm:p-5
+    md:p-8
+">
 
                     <h3 className="
-    mb-6
-    text-center
-    text-lg
-    font-bold
-    uppercase
-    tracking-wider
-    text-white
+mb-6
+text-center
+text-base
+sm:text-lg
+md:text-2xl
+font-bold
+uppercase
+tracking-wide
+text-white
 ">
                         Tu consulta
                     </h3>
