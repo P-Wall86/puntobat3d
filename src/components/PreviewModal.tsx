@@ -39,7 +39,7 @@ export default function PreviewModal({
             onClick={onClose}
         >
             <div
-                className="relative w-full max-w-sm rounded-2xl bg-[#1E293B] shadow-2xl border border-[#2cb7c9]/30"
+                className="relative w-[90vw] max-w-md rounded-2xl bg-[#1E293B] shadow-2xl border border-[#2cb7c9]/30"
                 onClick={(e) => e.stopPropagation()}
             >
                 <button
@@ -51,7 +51,15 @@ export default function PreviewModal({
 
                 <div className="p-6">
 
-                    <h3 className="mb-6 text-center text-lg font-semibold uppercase tracking-[0.15em] text-white">
+                    <h3 className="
+    mb-6
+    text-center
+    text-lg
+    font-bold
+    uppercase
+    tracking-wider
+    text-white
+">
                         Tu consulta
                     </h3>
 
@@ -66,7 +74,7 @@ export default function PreviewModal({
                                     key={product}
                                     className="flex items-center justify-between border-b border-[#2cb7c9]/20 py-3"
                                 >
-                                    <span className="pr-3 text-sm font-bold uppercase text-slate-200">
+                                    <span className="pr-3 text-sm font-medium uppercase text-slate-200">
                                         {product}
                                     </span>
 
@@ -92,7 +100,7 @@ export default function PreviewModal({
                             text-xs
                             font-[700]
                             uppercase
-                            tracking-[0.2em]
+                            tracking-wider
                             text-black
                             transition
                             hover:bg-[#e0b83a]

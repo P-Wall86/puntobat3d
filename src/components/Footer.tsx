@@ -14,20 +14,20 @@ export default function Footer() {
                     <div>
                         <h3 className="
   text-xl
-  font-bold
+  font-extrabold
   tracking-wide
   text-white
 ">
                             Punto BAT 3D
                         </h3>
 
-                        <p className="mt-2 text-sm text-slate-200">
+                        <p className="mt-2 text-sm font-light text-slate-200">
                             Diseño e impresión 3D personalizada
                         </p>
                     </div>
 
                     <div>
-                        <p className="text-sm text-slate-200 mb-3">
+                        <p className="text-sm font-light text-slate-200 mb-3">
                             Seguinos en:
                         </p>
 
@@ -62,7 +62,7 @@ export default function Footer() {
                 </div>
 
                 <div className="mt-10 border-t border-white/10 pt-6 text-center">
-                    <p className="text-xs tracking-wide text-slate-300">
+                    <p className="text-xs tracking-normal font-light text-slate-300">
                         © {new Date().getFullYear()} Punto BAT 3D · Todos los derechos reservados
                     </p>
                 </div>

@@ -103,7 +103,7 @@ export default function Page() {
   text-2xl
   sm:text-3xl
   lg:text-4xl
-  font-bold
+  font-extrabold
   tracking-wide
   whitespace-nowrap
 "
@@ -117,10 +117,8 @@ export default function Page() {
   text-sm
   sm:text-base
   lg:text-lg
-  font-medium
-  whitespace-nowrap
-"
-            >
+  font-normal
+  whitespace-nowrap">
               Soluciones en impresión 3D
             </p>
           </div>
@@ -136,7 +134,6 @@ export default function Page() {
       md:right-10
       lg:right-20
       -translate-y-1/2
-
       w-24
       sm:w-32
       md:w-40
@@ -148,7 +145,7 @@ export default function Page() {
         <PromoCarousel />
 
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-center text-2xl my-8 uppercase tracking-widest">
+          <h2 className="text-center text-2xl my-8 uppercase tracking-wide font-extrabold text-white">
             Nuestro Catálogo
           </h2>
         </div>
@@ -160,8 +157,19 @@ export default function Page() {
               id={cat.id}
               className="max-w-6xl mx-auto px-4 mb-10 scroll-mt-20"
             >
-              <h2 className="text-lg uppercase tracking-widest mb-4">
-                {cat.title}
+              <h2 className="mb-6 flex items-center gap-3">
+                <span className="h-px w-16 font-extrabold bg-[#0F172A]" />
+                <span
+                  className="
+      text-lg
+      font-extrabold
+      uppercase
+      tracking-wide
+      text-white
+    "
+                >
+                  {cat.title}
+                </span>
               </h2>
 
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

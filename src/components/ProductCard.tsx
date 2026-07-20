@@ -1,8 +1,6 @@
 type Product = {
     id: string;
     name: string;
-    price: number;
-    currency: string;
     description: string;
     image: string;
     category: string;
@@ -22,41 +20,76 @@ export default function ProductCard({
     return (
         <div
             className={`
-        bg-[#1E293B]
-        border border-[#2cb7c9]/20
-        rounded-lg
-        overflow-hidden
-        transition-all
-        duration-200
-        hover:border-[#2cb7c9]
-        hover:shadow-lg
-        hover:-translate-y-1
-        ${isSelected ? "border-[#f4a261] ring-1 ring-[#F4A896]" : ""}
-    `}
+                bg-[#0F172A]
+                border
+                border-[#2cb7c9]/20
+                rounded-2xl
+                overflow-hidden
+                transition-all
+                duration-300
+                hover:-translate-y-0.5
+hover:border-[#2cb7c9]/70
+hover:shadow-lg
+                ${isSelected ? "border-[#e76f7a] ring-2 ring-[#e76f7a]/40" : ""}
+            `}
         >
-            <div className="aspect-square overflow-hidden bg-slate-800">
+            <div
+                className="
+                aspect-[4/5]
+    overflow-hidden
+    rounded-xl
+    mx-3
+    mt-3
+    p-2
+            "
+            >
                 <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover hover:scale-105 transition duration-300"
+                    className="
+                        w-full
+    h-full
+    object-contain
+    rounded-xl
+    transition-transform
+    duration-500
+    hover:scale-[1.03]"
                     onClick={onOpenModal}
                 />
             </div>
 
-            <div className="p-3">
-                <h3 className="text-sm uppercase tracking-wide text-slate-200">
+            <div className="p-4">
+                <h3
+                    className="text-sm uppercase tracking-wide font-extrabold leading-tight line-clamp-2 text-white">
                     {product.name}
                 </h3>
 
-                <p className="text-base font-semibold text-[#f2c94c] mt-1">
-                    ${product.price}
-                </p>
-
                 <button
                     onClick={onOpenModal}
-                    className="mt-3 text-xs uppercase tracking-wider text-[#2cb7c9] hover:text-[#5fd3e0] transition"
+                    className="
+                        group
+                        mt-4
+                        text-xs
+                        uppercase
+                        tracking-widest
+                        font-extrabold
+                        text-[#2cb7c9]
+                        hover:text-[#5fd3e0]
+                        transition
+                    "
                 >
                     Ver detalle
+                    <span
+                        className="
+                        inline-block
+                        ml-1
+                        transition-transform
+                        duration-200
+                        group-hover:translate-x-1
+                    "
+                    >
+                        →
+                    </span>
                 </button>
             </div>
         </div>

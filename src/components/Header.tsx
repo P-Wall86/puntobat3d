@@ -20,13 +20,13 @@ export default function Header() {
                             sm:text-sm
                             lg:text-base
                             sm:text-sm
-                            tracking-widest 
+                            tracking-widest
                             uppercase"
                         >
                             <li>
                                 <Link
                                     href="#section1"
-                                    className="text-white font-medium drop-shadow-md hover:text-[#2cb7c9] transition">
+                                    className="text-white font-extrabold hover:text-[#2cb7c9] transition">
                                     Mates
                                 </Link>
                             </li>
@@ -34,7 +34,7 @@ export default function Header() {
                             <li>
                                 <Link
                                     href="#section2"
-                                    className="text-white font-medium drop-shadow-md hover:text-[#2cb7c9] transition">
+                                    className="text-white font-extrabold hover:text-[#2cb7c9] transition">
                                     Llaveros
                                 </Link>
                             </li>
@@ -42,7 +42,7 @@ export default function Header() {
                             <li>
                                 <Link
                                     href="#section3"
-                                    className="text-white font-medium drop-shadow-md hover:text-[#2cb7c9] transition">
+                                    className="text-white font-extrabold hover:text-[#2cb7c9] transition">
                                     Adornos
                                 </Link>
                             </li>

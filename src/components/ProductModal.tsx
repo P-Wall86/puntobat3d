@@ -23,20 +23,20 @@ export default function ProductModal({
     onToggle,
 }: ProductModalProps) {
     useEffect(() => {
-    const scrollY = window.scrollY;
+        const scrollY = window.scrollY;
 
-    document.body.style.position = "fixed";
-    document.body.style.top = `-${scrollY}px`;
-    document.body.style.width = "100%";
+        document.body.style.position = "fixed";
+        document.body.style.top = `-${scrollY}px`;
+        document.body.style.width = "100%";
 
-    return () => {
-        document.body.style.position = "";
-        document.body.style.top = "";
-        document.body.style.width = "";
+        return () => {
+            document.body.style.position = "";
+            document.body.style.top = "";
+            document.body.style.width = "";
 
-        window.scrollTo(0, scrollY);
-    };
-}, []);
+            window.scrollTo(0, scrollY);
+        };
+    }, []);
 
     return (
         <div
@@ -45,9 +45,23 @@ export default function ProductModal({
         >
 
             <div
-                className="w-[220px] md:w-[800px] bg-[#1E293B] max-w-[95vw] text-white
-                        rounded-2xl overflow-hidden shadow-2xl border border-[#2cb7c9]/20
-                        relative flex flex-col md:flex-row touch-auto"
+                className="
+        w-[82vw]
+max-w-[95vw]
+md:max-w-[650px]
+        bg-[#1E293B]
+        text-white
+        rounded-2xl
+        overflow-hidden
+        shadow-2xl
+        border
+        border-[#2cb7c9]/20
+        relative
+        flex
+        flex-col
+        md:flex-row
+        touch-auto
+    "
                 onClick={(e) => e.stopPropagation()}
             >
 
@@ -58,25 +72,51 @@ export default function ProductModal({
                     ×
                 </button>
 
-                <div className="w-full h-60 md:w-[45%] md:h-auto
-                    bg-slate-900/40 flex items-center justify-center pt-3 md:pt-0">
+                <div className="
+        w-full
+aspect-[4/3]
+md:aspect-auto
+md:h-auto
+        md:w-[45%]
+        md:h-auto
+        bg-[#0F172A]/60
+        flex
+        items-center
+        justify-center
+        p-4">
                     <img
                         src={product.image}
                         alt={product.name}
-                        className="h-full w-auto md:w-full md:h-full object-contain"
+                        className="
+                        max-h-full max-w-full
+                        object-contain rounded-xl"
                     />
                 </div>
 
-                <div className="p-3 md:flex-1 md:p-8 flex flex-col gap-2 md:justify-center">
+                <div className="
+                        p-3
+sm:p-5
+md:flex-1
+md:p-8
+                        flex
+                        flex-col
+                        gap-3
+                        md:justify-center">
                     <div className="flex flex-col gap-0.5">
-                        <h3 className="text-xs md:text-2xl font-bold uppercase tracking-wide 
-                        text-white break-words leading-tight">
+                        <h3 className="
+        text-base
+        sm:text-lg
+        md:text-2xl
+        font-bold
+        uppercase
+        tracking-wide
+        text-white
+        break-words
+        leading-tight
+    ">
                             {product.name}
                         </h3>
 
-                        <p className="text-[#f2c94c] text-xs md:text-xl font-bold mt-0.5">
-                            ${product.price} {product.currency}
-                        </p>
 
                         <p className="text-xs md:text-sm text-slate-300 leading-normal
                         max-h-[70px] md:max-h-none overflow-y-auto md:overflow-visible
@@ -88,14 +128,14 @@ export default function ProductModal({
                     <button
                         onClick={onToggle}
                         className={`
-                            w-full mt-2 py-2 rounded-xl text-[10px] uppercase tracking-wider transition font-bold active:scale-95 shadow-md
+                            w-full mt-2 py-2 rounded-xl text-xs sm:text-sm uppercase tracking-wider transition font-bold active:scale-95 shadow-md
                             ${isSelected
                                 ? "bg-[#e76f7a] text-black hover:bg-[#d45f6a]"
                                 : "bg-[#f2c94c] text-black hover:bg-[#e0b83a]"
                             }
                         `}
                     >
-                        {isSelected ? "Quitar" : "Agregar"}
+                        {isSelected ? "Quitar de consulta" : "Agregar a consulta"}
                     </button>
                 </div>
             </div>

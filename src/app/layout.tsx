@@ -1,7 +1,24 @@
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import localFont from "next/font/local";
 
+const arialRounded = localFont({
+  src: [
+    {
+      path: "./fonts/ArialRoundedMTLight.ttf",
+      weight: "300",
+    },
+    {
+      path: "./fonts/ArialRoundedMT.ttf",
+      weight: "400",
+    },
+    {
+      path: "./fonts/ArialRoundedMTExtraBold.ttf",
+      weight: "800",
+    },
+  ],
+});
 
 export default function RootLayout({
   children,
@@ -10,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className="relative bg-[#013b7b] text-white">
+      <body className={`${arialRounded.className} bg-[#0F172A] text-white`}>
 
         <div
           className="
@@ -19,7 +36,7 @@ export default function RootLayout({
     bg-[url('/images/hero/Hero.png')]
     bg-cover
     bg-center
-    opacity-63
+    opacity-55
     -z-10
   "
         />
