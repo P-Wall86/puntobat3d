@@ -10,7 +10,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className="bg-[#0F172A] text-white">
+      <body className="relative bg-[#013b7b] text-white">
+
+        <div
+          className="
+    fixed
+    inset-0
+    bg-[url('/images/hero/Hero.png')]
+    bg-cover
+    bg-center
+    opacity-63
+    -z-10
+  "
+        />
         <Header />
 
         <main className="min-h-screen">

@@ -64,82 +64,151 @@ export default function Page() {
   ];
 
   return (
-    <main>
+    <main className="min-h-screen">
+      <div className="relative z-10">
 
-      <section className="
-  w-full
-  lg:max-w-4xl
-  mx-auto
-  overflow-hidden
-">
-        <img
-          src="/images/hero/Hero.webp"
-          alt="Punto BAT 3D - Soluciones en impresión 3D"
-          className="
-            w-full
-            object-contain
-        "
-        />
-      </section>
+        <section className="
+    relative
+    w-full
+    overflow-hidden
+    h-[170px]
+    sm:h-[200px]
+    md:h-[250px]
+  ">
+          <div
+            className="
+      absolute
+      left-4
+      sm:left-6
+      md:left-10
+      lg:left-20
+      top-1/2
+      -translate-y-1/2
 
-      <PromoCarousel />
+      bg-[#013b7b]/10
+      backdrop-blur-sm
+      rounded-xl
 
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-center text-2xl my-8 uppercase tracking-widest">
-          Nuestro Catálogo
-        </h2>
-      </div>
+      px-4
+      py-3
+      sm:px-5
+      md:px-6
 
-      {categories.map(cat => (
-        <section
-          key={cat.id}
-          id={cat.id}
-          className="max-w-6xl mx-auto px-4 mb-10 scroll-mt-20"
-        >
-          <h2 className="text-lg uppercase tracking-widest mb-4">
-            {cat.title}
-          </h2>
+      text-white
+      max-w-[55%]
+    "
+          >
+            <h1
+              className="
+  text-2xl
+  sm:text-3xl
+  lg:text-4xl
+  font-bold
+  tracking-wide
+  whitespace-nowrap
+"
+            >
+              Punto BAT 3D
+            </h1>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {products
-              .filter(p => p.category === cat.id)
-              .map(product => (
-                <ProductCard
-                  key={product.id}
-                  product={product}
-                  isSelected={selectedProducts.has(product.name)}
-                  onOpenModal={() => setModalProduct(product)}
-                />
-              ))}
+            <p
+              className="
+  mt-1
+  text-sm
+  sm:text-base
+  lg:text-lg
+  font-medium
+  whitespace-nowrap
+"
+            >
+              Soluciones en impresión 3D
+            </p>
           </div>
+
+          <img
+            src="/images/logo/LogoColor.png"
+            alt="Punto BAT 3D"
+            className="
+      absolute
+      top-1/2
+      right-4
+      sm:right-6
+      md:right-10
+      lg:right-20
+      -translate-y-1/2
+
+      w-24
+      sm:w-32
+      md:w-40
+      lg:w-48
+    "
+          />
         </section>
-      ))}
 
-      {modalProduct && (
-        <ProductModal
-          product={modalProduct}
-          isSelected={selectedProducts.has(modalProduct.name)}
-          onClose={() => setModalProduct(null)}
-          onToggle={() => toggleProduct(modalProduct.name)}
+        <PromoCarousel />
+
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-center text-2xl my-8 uppercase tracking-widest">
+            Nuestro Catálogo
+          </h2>
+        </div>
+
+        {
+          categories.map(cat => (
+            <section
+              key={cat.id}
+              id={cat.id}
+              className="max-w-6xl mx-auto px-4 mb-10 scroll-mt-20"
+            >
+              <h2 className="text-lg uppercase tracking-widest mb-4">
+                {cat.title}
+              </h2>
+
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {products
+                  .filter(p => p.category === cat.id)
+                  .map(product => (
+                    <ProductCard
+                      key={product.id}
+                      product={product}
+                      isSelected={selectedProducts.has(product.name)}
+                      onOpenModal={() => setModalProduct(product)}
+                    />
+                  ))}
+              </div>
+            </section>
+          ))
+        }
+
+        {
+          modalProduct && (
+            <ProductModal
+              product={modalProduct}
+              isSelected={selectedProducts.has(modalProduct.name)}
+              onClose={() => setModalProduct(null)}
+              onToggle={() => toggleProduct(modalProduct.name)}
+            />
+          )
+        }
+
+        <WhatsAppButton
+          count={selectedProducts.size}
+          onClick={() => setPreviewOpen(true)}
         />
-      )}
 
-      <WhatsAppButton
-        count={selectedProducts.size}
-        onClick={() => setPreviewOpen(true)}
-      />
+        {
+          previewOpen && (
+            <PreviewModal
+              selectedProducts={Array.from(selectedProducts)}
+              onClose={() => setPreviewOpen(false)}
+              onRemove={toggleProduct}
+              onSendWhatsApp={sendWhatsApp}
+            />
+          )
+        }
 
-      {previewOpen && (
-        <PreviewModal
-          selectedProducts={Array.from(selectedProducts)}
-          onClose={() => setPreviewOpen(false)}
-          onRemove={toggleProduct}
-          onSendWhatsApp={sendWhatsApp}
-        />
-      )}
-
-      <BackToTop activeCart={selectedProducts.size > 0} />
-
-    </main>
+        <BackToTop activeCart={selectedProducts.size > 0} />
+      </div>
+    </main >
   );
 }
