@@ -53,7 +53,7 @@ px-4"
     w-[82vw]
     max-w-md
     rounded-2xl
-    bg-[#1E293B]
+    bg-[#0F172A]
     border
     border-[#2cb7c9]/20
     shadow-2xl

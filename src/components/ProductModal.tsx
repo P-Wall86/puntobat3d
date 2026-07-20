@@ -49,7 +49,7 @@ export default function ProductModal({
         w-[82vw]
 max-w-[95vw]
 md:max-w-[650px]
-        bg-[#1E293B]
+        bg-[#0F172A]
         text-white
         rounded-2xl
         overflow-hidden
