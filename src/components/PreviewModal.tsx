@@ -35,7 +35,16 @@ export default function PreviewModal({
 
     return (
         <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm px-4"
+            className="
+fixed
+inset-0
+z-50
+flex
+items-center
+justify-center
+bg-black/85
+backdrop-blur-sm
+px-4"
             onClick={onClose}
         >
             <div
@@ -83,17 +92,7 @@ export default function PreviewModal({
     md:p-8
 ">
 
-                    <h3 className="
-mb-6
-text-center
-text-base
-sm:text-lg
-md:text-2xl
-font-bold
-uppercase
-tracking-wide
-text-white
-">
+                    <h3 className="mb-6 text-center text-base sm:text-lg md:text-2xl font-bold uppercase tracking-wide text-white">
                         Tu consulta
                     </h3>
 
@@ -106,16 +105,39 @@ text-white
                             {selectedProducts.map((product) => (
                                 <li
                                     key={product}
-                                    className="flex items-center justify-between border-b border-[#2cb7c9]/20 py-3"
-                                >
-                                    <span className="pr-3 text-sm font-medium uppercase text-slate-200">
+                                    className="
+        flex
+        items-center
+        justify-between
+        border-b
+        border-[#2cb7c9]/20
+        py-4">
+                                    <span className="
+                                            pr-3
+                                            text-sm
+                                            font-bold
+                                            uppercase
+                                            tracking-wide
+                                            text-white
+                                            ">
                                         {product}
                                     </span>
 
                                     <button
                                         onClick={() => onRemove(product)}
-                                        className="text-xl text-[#e76f7a] transition hover:scale-110 hover:text-[#d45f6a]"
-                                    >
+                                        className="
+                                        flex
+                                        h-6
+                                        w-6
+                                        items-center
+                                        justify-center
+                                        rounded-full
+                                        text-sm
+                                        font-bold
+                                        text-[#e76f7a]
+                                        transition-all
+                                        hover:bg-[#e76f7a]/10
+                                        hover:scale-105">
                                         ×
                                     </button>
                                 </li>
@@ -127,20 +149,24 @@ text-white
                         onClick={onSendWhatsApp}
                         disabled={selectedProducts.length === 0}
                         className="
-                            mt-6
-                            w-full
-                            bg-[#f2c94c]
-                            py-4
-                            text-xs
-                            font-[700]
-                            uppercase
-                            tracking-wider
-                            text-black
-                            transition
-                            hover:bg-[#e0b83a]
-                            disabled:cursor-not-allowed
-                            disabled:opacity-50
-                            rounded-lg">
+    mt-6
+    w-full
+    rounded-xl
+    bg-[#f2c94c]
+    py-2
+    text-xs
+    sm:text-sm
+    font-bold
+    uppercase
+    tracking-wider
+    text-black
+    shadow-md
+    transition
+    active:scale-95
+    hover:bg-[#e0b83a]
+    disabled:cursor-not-allowed
+    disabled:opacity-50
+">
                         Enviar WhatsApp
                     </button>
 
