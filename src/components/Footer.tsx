@@ -42,40 +42,23 @@ export default function Footer() {
                                     src="/images/socials/facebook.svg"
                                     alt="Facebook"
                                     className="
-w-6
-h-6
-opacity-70
-hover:opacity-100
-hover:scale-110
-invert
-transition
-"
-                                />
-                            </a>
-
+                                    w-6 h-6
+                                    opacity-70 hover:opacity-100
+                                    hover:scale-110 invert
+                                    transition"
+                                /></a>
                             <a
                                 href="https://www.instagram.com/puntobat_3d"
                                 target="_blank"
-                                rel="noopener noreferrer"
-                            >
+                                rel="noopener noreferrer">
                                 <img
                                     src="/images/socials/instagram.svg"
                                     alt="Instagram"
-                                    className="
-w-6
-h-6
-opacity-70
-hover:opacity-100
-hover:scale-110
-invert
-transition
-"
+                                    className="w-6 h-6 opacity-70 hover:opacity-100 hover:scale-110 invert transition"
                                 />
                             </a>
-
                         </div>
                     </div>
-
                 </div>
 
                 <div className="mt-10 border-t border-white/10 pt-6 text-center">
@@ -83,7 +66,6 @@ transition
                         © {new Date().getFullYear()} Punto BAT 3D · Todos los derechos reservados
                     </p>
                 </div>
-
             </div>
         </footer>
     );

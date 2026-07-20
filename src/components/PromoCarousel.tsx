@@ -1,9 +1,10 @@
 'use client';
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 export default function PromoCarousel() {
     const sliderRef = useRef<HTMLDivElement>(null);
+    const [canScrollLeft, setCanScrollLeft] = useState(false);
 
     function scroll(direction: "left" | "right") {
         if (!sliderRef.current) return;
@@ -14,40 +15,42 @@ export default function PromoCarousel() {
         });
     }
 
+    function updateScroll() {
+        if (!sliderRef.current) return;
+
+        setCanScrollLeft(sliderRef.current.scrollLeft > 0);
+    }
+
     return (
         <section className="
             max-w-6xl
             mx-auto
             px-4
-            py-8
-            relative
-        ">
+            pt-4
+            pb-8
+            relative">
 
             <button
                 onClick={() => scroll("left")}
-                className="
-                    hidden
-                    lg:flex
-                    absolute
-                    left-2
-                    top-1/2
-                    -translate-y-1/2
-                    z-10
-                    w-10
-                    h-10
-                    rounded-full
-                    bg-[#1E293B]
-                    text-white
-                    items-center
-                    justify-center
-                    hover:bg-[#2cb7c9]
-                "
-            >
-                ←
-            </button>
-
+                className={`
+                ${!canScrollLeft ? "hidden" : "flex"}
+                absolute
+                left-2
+                top-1/2
+                -translate-y-1/2
+                z-10
+                w-10
+                h-10
+                rounded-full
+                bg-[#1E293B]
+                text-white
+                items-center
+                justify-center
+                hover:bg-[#2cb7c9]`}>
+                ←</button>
 
             <div
+                onScroll={updateScroll}
                 ref={sliderRef}
                 className="
                     flex
@@ -55,9 +58,7 @@ export default function PromoCarousel() {
                     overflow-x-auto
                     snap-x
                     snap-mandatory
-                    scrollbar-hide
-                "
-            >
+                    scrollbar-hide">
 
                 <img
                     src="/images/banners/mates.webp"
@@ -66,9 +67,10 @@ export default function PromoCarousel() {
                         lg:min-w-[45%]
                         snap-center
                         rounded-2xl
+                        shadow-lg
                         object-contain
-                    "
-                />
+                        bg-white/5
+                        p-2"/>
 
                 <img
                     src="/images/banners/cockades.webp"
@@ -77,9 +79,10 @@ export default function PromoCarousel() {
                         lg:min-w-[45%]
                         snap-center
                         rounded-2xl
+                        shadow-lg
                         object-contain
-                    "
-                />
+                        bg-white/5
+                        p-2"/>
 
                 <img
                     src="/images/banners/aboutus.webp"
@@ -88,12 +91,11 @@ export default function PromoCarousel() {
                         lg:min-w-[45%]
                         snap-center
                         rounded-2xl
+                        shadow-lg
                         object-contain
-                    "
-                />
-
+                        bg-white/5
+                        p-2"/>
             </div>
-
 
             <button
                 onClick={() => scroll("right")}
@@ -108,16 +110,17 @@ export default function PromoCarousel() {
                     w-10
                     h-10
                     rounded-full
-                    bg-[#1E293B]
+                    bg-[#013b7b]/70
+                    backdrop-blur-sm
+                    border
+                    border-[#2cb7c9]/30
                     text-white
                     items-center
                     justify-center
                     hover:bg-[#2cb7c9]
-                "
-            >
-                →
-            </button>
-
+                    transition-all
+                    hover:scale-110">
+                →</button>
         </section>
     );
 }
