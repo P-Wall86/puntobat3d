@@ -34,7 +34,7 @@ export default function ProductModal({
         <div className="fixed inset-0 bg-black/85 flex items-center justify-center z-50 p-4 animate-fade-in" onClick={onClose}>
             <div className="w-[82vw] max-w-[95vw] md:max-w-[650px] bg-[#013b7b]/40 backdrop-blur-sm text-white rounded-2xl overflow-hidden shadow-2xl border border-[#2cb7c9]/20 relative flex flex-col md:flex-row touch-auto" onClick={(e) => e.stopPropagation()}>
                 <button onClick={onClose} className="absolute top-2 right-2 z-20 flex h-7 w-7 text-lg items-center justify-center rounded-full border border-slate-700/50 bg-slate-900/80 text-sm text-slate-400 transition-colors hover:text-[#2cb7c9]">
-                    X
+                    x
                 </button>
                 <div className="w-full aspect-[4/3] md:aspect-auto md:h-auto md:w-[45%] bg-black/25 backdrop-blur-md flex items-center justify-center p-4">
                     <img src={product.image} alt={product.name} className="max-h-full max-w-full object-contain rounded-xl"/>
