@@ -1,10 +1,15 @@
 'use client';
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 export default function PromoCarousel() {
     const sliderRef = useRef<HTMLDivElement>(null);
     const [canScrollLeft, setCanScrollLeft] = useState(false);
+    const [canScrollRight, setCanScrollRight] = useState(true);
+
+    useEffect(() => {
+        updateScroll();
+    }, []);
 
     function scroll(direction: "left" | "right") {
         if (!sliderRef.current) return;
@@ -18,7 +23,13 @@ export default function PromoCarousel() {
     function updateScroll() {
         if (!sliderRef.current) return;
 
-        setCanScrollLeft(sliderRef.current.scrollLeft > 0);
+        const el = sliderRef.current;
+
+        setCanScrollLeft(el.scrollLeft > 0);
+
+        setCanScrollRight(
+            el.scrollLeft < el.scrollWidth - el.clientWidth - 5
+        );
     }
 
     return (
@@ -33,7 +44,7 @@ export default function PromoCarousel() {
             <button
                 onClick={() => scroll("left")}
                 className={`
-                ${!canScrollLeft ? "hidden" : "flex"}
+                ${!canScrollLeft ? "hidden" : "hidden lg:flex"}
                 absolute
                 left-2
                 top-1/2
@@ -99,27 +110,27 @@ export default function PromoCarousel() {
 
             <button
                 onClick={() => scroll("right")}
-                className="
-                    hidden
-                    lg:flex
-                    absolute
-                    right-2
-                    top-1/2
-                    -translate-y-1/2
-                    z-10
-                    w-10
-                    h-10
-                    rounded-full
-                    bg-[#013b7b]/70
-                    backdrop-blur-sm
-                    border
-                    border-[#2cb7c9]/30
-                    text-white
-                    items-center
-                    justify-center
-                    hover:bg-[#2cb7c9]
-                    transition-all
-                    hover:scale-110">
+                className={`
+${!canScrollRight ? "hidden" : "hidden lg:flex"}
+absolute
+right-2
+top-1/2
+-translate-y-1/2
+z-10
+w-10
+h-10
+rounded-full
+bg-[#013b7b]/70
+backdrop-blur-sm
+border
+border-[#2cb7c9]/30
+text-white
+items-center
+justify-center
+hover:bg-[#2cb7c9]
+transition-all
+hover:scale-110
+`}>
                 →</button>
         </section>
     );

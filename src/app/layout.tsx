@@ -28,18 +28,8 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`${arialRounded.className} bg-[#0F172A] text-white`}>
-
-        <div
-          className="
-    fixed
-    inset-0
-    bg-[url('/images/hero/Hero.png')]
-    bg-cover
-    bg-center
-    opacity-55
-    -z-10
-  "
-        />
+        <div className="fixed inset-0 bg-[url('/images/hero/Hero.png')] bg-cover bg-center opacity-55 -z-10"/>
+        
         <Header />
 
         <main className="min-h-screen">
