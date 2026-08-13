@@ -19,7 +19,11 @@ export default function Page() {
   useEffect(() => {
     fetch('/data/products.json')
       .then(res => res.json())
-      .then((data: Product[]) => setProducts(data))
+      .then((data: Product[]) => {
+        console.log("📦 Datos recibidos:", data);
+        console.log("📊 Cantidad de productos:", data.length);
+        setProducts(data)
+      })
       .catch(console.error);
   }, []);
 
@@ -39,17 +43,20 @@ export default function Page() {
       Array.from(selectedProducts).join("\n- ")
     );
 
-    const phone = "5491124834551";
+    const phone = "5493764991692";
     const url = `https://api.whatsapp.com/send?phone=${phone}&text=${message}`;
-
     window.open(url, "_blank");
   }
 
   const categories = [
-    { id: 'section1', title: 'Mates' },
-    { id: 'section2', title: 'Llaveros' },
-    { id: 'section3', title: 'Adornos y Accesorios' },
+    { id: 'mates', title: 'Mates' },
+    { id: 'llaveros', title: 'Llaveros' },
+    { id: 'section3', title: 'Decoración' },
+    { id: 'varios', title: 'Varios' },
   ];
+
+  console.log("🔄 Products en el render:", products);
+  console.log("🔢 Categorías:", categories.map(c => c.id));
 
   return (
     <main className="min-h-screen">
@@ -63,7 +70,7 @@ export default function Page() {
               Soluciones en impresión 3D
             </p>
           </div>
-          <img src="/images/logo/LogoColor.png" alt="Punto BAT 3D" className="absolute top-1/2 right-4 sm:right-6 md:right-10 lg:right-20 -translate-y-1/2 w-24 sm:w-32 md:w-40 lg:w-48 "/>
+          <img src="/images/logo/LogoColor.png" alt="Punto BAT 3D" className="absolute top-1/2 right-4 sm:right-6 md:right-10 lg:right-20 -translate-y-1/2 w-24 sm:w-32 md:w-40 lg:w-48 " />
         </section>
 
         <PromoCarousel />
@@ -75,56 +82,64 @@ export default function Page() {
         </div>
 
         {categories.map(cat => (
-            <section 
-              key={cat.id} 
-              id={cat.id} 
-              className="max-w-6xl mx-auto px-4 mb-10 scroll-mt-20"
-            >
-              <h2 className="mb-6 flex items-center gap-3">
-                <span className="h-px w-16 bg-[#0F172A]"/>
-                <span className="text-lg font-extrabold uppercase tracking-wide text-white">
-                  {cat.title}
-                </span>
-              </h2>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {products
-                  .filter(p => p.category === cat.id)
-                  .map(product => (
-                    <ProductCard 
-                    key={product.id} 
-                    product={product} 
-                    isSelected={selectedProducts.has(product.name)} 
-                    onOpenModal={() => setModalProduct(product)}/>
-                  ))}
-              </div>
-            </section>
-          ))
-        }
+          <section
+            key={cat.id}
+            id={cat.id}
+            className="max-w-6xl mx-auto px-4 mb-10 scroll-mt-20"
+          >
+            <h2 className="mb-6 flex items-center gap-3">
+              <span className="h-px w-16 bg-[#0F172A]" />
+              <span className="text-lg font-extrabold uppercase tracking-wide text-white">
+                {cat.title}
+              </span>
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {products
+                .filter(p => {
+                  if (cat.id === 'section3') {
+                    // Decoración: muestra TODO lo que NO es mates, llaveros ni varios
+                    return !['mates', 'llaveros', 'varios'].includes(p.category);
+                  }
+                  return p.category === cat.id;
+                })
+                .map(product => (
+                  <ProductCard
+                    key={product.id}
+                    product={product}
+                    isSelected={selectedProducts.has(product.name)}
+                    onOpenModal={() => setModalProduct(product)}
+                  />
+                ))
+              }
+            </div>
+          </section>
+        ))}
 
         {modalProduct && (
-            <ProductModal 
-            product={modalProduct} 
-            isSelected={selectedProducts.has(modalProduct.name)} 
-            onClose={() => setModalProduct(null)} 
-            onToggle={() => toggleProduct(modalProduct.name)}/>
-          )
-        }
-        
-            <WhatsAppButton
-            count={selectedProducts.size}
-            onClick={() => setPreviewOpen(true)}/>
+          <ProductModal
+            product={modalProduct}
+            isSelected={selectedProducts.has(modalProduct.name)}
+            onClose={() => setModalProduct(null)}
+            onToggle={() => toggleProduct(modalProduct.name)}
+          />
+        )}
+
+        <WhatsAppButton
+          count={selectedProducts.size}
+          onClick={() => setPreviewOpen(true)}
+        />
 
         {previewOpen && (
-            <PreviewModal
-              selectedProducts={Array.from(selectedProducts)}
-              onClose={() => setPreviewOpen(false)}
-              onRemove={toggleProduct}
-              onSendWhatsApp={sendWhatsApp}/>
-          )
-        }
+          <PreviewModal
+            selectedProducts={Array.from(selectedProducts)}
+            onClose={() => setPreviewOpen(false)}
+            onRemove={toggleProduct}
+            onSendWhatsApp={sendWhatsApp}
+          />
+        )}
 
-        <BackToTop activeCart={selectedProducts.size > 0}/>
+        <BackToTop activeCart={selectedProducts.size > 0} />
       </div>
-    </main >
+    </main>
   );
 }
