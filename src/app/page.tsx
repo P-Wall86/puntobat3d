@@ -15,8 +15,8 @@ export default function Page() {
   const [modalProduct, setModalProduct] = useState<Product | null>(null);
   const [previewOpen, setPreviewOpen] = useState(false);
   const [pageState, setPageState] = useState<{ [key: string]: number }>({});
+  const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
 
-  // Detectar tamaño de pantalla
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ export default function Page() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const productsPerPage = isMobile ? 4 : 8;
+  const productsPerPage = isMobile ? 4 : 4;
 
   useEffect(() => {
     fetch('/data/products.json')
@@ -60,8 +60,16 @@ export default function Page() {
   const categories = [
     { id: 'mates', title: 'Mates' },
     { id: 'llaveros', title: 'Llaveros' },
-    { id: 'section3', title: 'Decoración' },
+    { id: 'figuras', title: 'Figuras' },
+    { id: 'organizadores', title: 'Organizadores' },
     { id: 'varios', title: 'Varios' },
+  ];
+
+  const subcategories = [
+    { id: 'fiestas', label: 'Fiestas' },
+    { id: 'carteles', label: 'Carteles' },
+    { id: 'pedidos-especiales', label: 'Pedidos' },
+    { id: 'toppers', label: 'Toppers' },
   ];
 
   const goToPage = (categoryId: string, page: number) => {
@@ -85,7 +93,7 @@ export default function Page() {
 
         <PromoCarousel />
 
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-center text-2xl my-8 uppercase tracking-wide font-extrabold text-white">
             Nuestro Catálogo
           </h2>
@@ -95,10 +103,19 @@ export default function Page() {
           const currentPage = pageState[cat.id] || 1;
 
           let filtered: Product[] = [];
-          if (cat.id === 'section3') {
-            filtered = products.filter(p => !['mates', 'llaveros', 'varios'].includes(p.category));
+
+          if (cat.id === 'figuras') {
+            filtered = products.filter(product => product.category === 'figuras');
+          } else if (cat.id === 'organizadores') {
+            filtered = products.filter(product => product.category === 'organizadores');
+          } else if (cat.id === 'varios') {
+            if (selectedSubcategory) {
+              filtered = products.filter(product => product.category === 'varios' && product.subcategory === selectedSubcategory);
+            } else {
+              filtered = products.filter(product => product.category === 'varios');
+            }
           } else {
-            filtered = products.filter(p => p.category === cat.id);
+            filtered = products.filter(product => product.category === cat.id);
           }
 
           const totalPages = Math.ceil(filtered.length / productsPerPage);
@@ -106,18 +123,58 @@ export default function Page() {
           const indexOfFirst = indexOfLast - productsPerPage;
           const currentProducts = filtered.slice(indexOfFirst, indexOfLast);
 
+          const subcategoryLabel = subcategories.find(sub => sub.id === selectedSubcategory)?.label;
+
           return (
             <section
               key={cat.id}
               id={cat.id}
-              className="max-w-6xl mx-auto px-4 mb-10 scroll-mt-20"
+              className="max-w-5xl mx-auto px-4 mb-10 scroll-mt-20"
             >
               <h2 className="mb-6 flex items-center gap-3">
                 <span className="h-px w-16 bg-[#0F172A]" />
                 <span className="text-lg font-extrabold uppercase tracking-wide text-white">
-                  {cat.title}
+                  {cat.id === 'varios' && selectedSubcategory && subcategoryLabel
+                    ? subcategoryLabel
+                    : cat.title}
                 </span>
               </h2>
+
+              {cat.id === 'varios' && (
+                <div className="mb-6">
+                  <div className="flex flex-wrap justify-center gap-2">
+                    <button
+                      onClick={() => {
+                        setSelectedSubcategory(null);
+                        setPageState(prev => ({ ...prev, ['varios']: 1 }));
+                      }}
+                      className={`px-4 py-2 text-xs font-bold uppercase tracking-widest rounded-xl border transition text-center ${
+                        !selectedSubcategory
+                          ? 'bg-[#2cb7c9] text-[#0F172A] border-[#2cb7c9] shadow-md'
+                          : 'bg-[#1E293B] text-white/80 border-[#2cb7c9]/30 hover:bg-[#2cb7c9]/20 hover:border-[#2cb7c9]/60'
+                      }`}
+                    >
+                      Todos
+                    </button>
+                    {subcategories.map(sub => (
+                      <button
+                        key={sub.id}
+                        onClick={() => {
+                          setSelectedSubcategory(sub.id);
+                          setPageState(prev => ({ ...prev, ['varios']: 1 }));
+                        }}
+                        className={`px-4 py-2 text-xs font-bold uppercase tracking-widest rounded-xl border transition text-center ${
+                          selectedSubcategory === sub.id
+                            ? 'bg-[#2cb7c9] text-[#0F172A] border-[#2cb7c9] shadow-md'
+                            : 'bg-[#1E293B] text-white/80 border-[#2cb7c9]/30 hover:bg-[#2cb7c9]/20 hover:border-[#2cb7c9]/60'
+                        }`}
+                      >
+                        {sub.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {currentProducts.map(product => (
@@ -133,7 +190,10 @@ export default function Page() {
               {totalPages > 1 && (
                 <div className="flex justify-center items-center gap-2 sm:gap-4 mt-8">
                   <button
-                    onClick={() => goToPage(cat.id, currentPage - 1)}
+                    onClick={() => {
+                      const newPage = currentPage - 1;
+                      setPageState(prev => ({ ...prev, [cat.id]: newPage }));
+                    }}
                     disabled={currentPage === 1}
                     className="px-2 sm:px-4 py-2 text-sm sm:text-base font-bold uppercase tracking-widest text-white bg-[#013b7b]/50 rounded-lg disabled:opacity-30 disabled:cursor-not-allowed hover:bg-[#2cb7c9] transition flex items-center justify-center min-w-[40px] sm:min-w-[100px]"
                   >
@@ -146,7 +206,10 @@ export default function Page() {
                   </span>
 
                   <button
-                    onClick={() => goToPage(cat.id, currentPage + 1)}
+                    onClick={() => {
+                      const newPage = currentPage + 1;
+                      setPageState(prev => ({ ...prev, [cat.id]: newPage }));
+                    }}
                     disabled={currentPage === totalPages}
                     className="px-2 sm:px-4 py-2 text-sm sm:text-base font-bold uppercase tracking-widest text-white bg-[#013b7b]/50 rounded-lg disabled:opacity-30 disabled:cursor-not-allowed hover:bg-[#2cb7c9] transition flex items-center justify-center min-w-[40px] sm:min-w-[100px]"
                   >

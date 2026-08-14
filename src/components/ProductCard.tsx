@@ -12,7 +12,7 @@ export default function ProductCard({
     onOpenModal,
 }: ProductCardProps) {
     return (
-        <div className={`bg-black/25 backdrop-blur-md border border-[#2cb7c9]/20 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:border-[#2cb7c9]/70 shadow-md hover:shadow-xl ${isSelected ? "border-[#e76f7a] ring-2 ring-[#e76f7a]/40" : ""}`}>
+        <div className={`w-full bg-black/25 backdrop-blur-md border border-[#2cb7c9]/20 rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-0.5 hover:border-[#2cb7c9]/70 shadow-md hover:shadow-xl ${isSelected ? "border-[#e76f7a] ring-2 ring-[#e76f7a]/40" : ""}`}>
             <div className="aspect-[4/5] overflow-hidden rounded-xl mx-3 mt-3 p-2">
                 <img src={product.image} alt={product.name} className="w-full h-full object-contain rounded-xl transition-transform duration-500 hover:scale-[1.03]" onClick={onOpenModal}/>
             </div>

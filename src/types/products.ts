@@ -5,4 +5,5 @@ export type Product = {
     image: string;
     category: string;
     alt?: string;
+    subcategory?: string;
 };

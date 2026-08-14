@@ -2,7 +2,8 @@
     {
         "id": "cartel2",
         "name": "Cartel Para Pared",
-        "category": "section3",
+        "category": "varios",
+        "subcategory": "carteles",
         "image": "/images/products/Cartel2.jpeg",
         "alt": "Cartel",
         "description": "Cartel para amurar sobre pared."
@@ -10,7 +11,8 @@
     {
         "id": "cartelluminoso",
         "name": "Cartel Luminoso",
-        "category": "section3",
+        "category": "varios",
+        "subcategory": "carteles",
         "image": "/images/products/CartelLuminoso.png",
         "alt": "Cartel",
         "description": "Cartel retroiluminado con variedad de opciones de iluminación. Se alimenta por USB."
@@ -18,7 +20,8 @@
     {
         "id": "cartelqr",
         "name": "Cartel con QR",
-        "category": "section3",
+        "category": "varios",
+        "subcategory": "carteles",
         "image": "/images/products/CartelQR.jpeg",
         "alt": "Cartel",
         "description": "Cartel con QR para redes sociales, Whatsapp o MercadoPago."
@@ -26,7 +29,7 @@
     {
         "id": "cartucheracarpi",
         "name": "Cartucheras",
-        "category": "accesorios",
+        "category": "varios",
         "image": "/images/products/CartucheraCarpi.jpeg",
         "alt": "Cartuchera",
         "description": "Cartuchera temática de Capibara. Ideal para guardar lápices y útiles escolares. Capacidad para 8 unidades."
@@ -34,7 +37,7 @@
     {
         "id": "centromesa",
         "name": "Centros de Mesa",
-        "category": "section3",
+        "category": "varios",
         "image": "/images/products/Centromesa.jpeg",
         "alt": "Centros de Mesa",
         "description": "Centros de mesa para cumpleaños, casamientos o eventos."
@@ -42,7 +45,7 @@
     {
         "id": "escarapelas",
         "name": "Escarapelas",
-        "category": "accesorios",
+        "category": "varios",
         "image": "/images/products/Escarapelas.png",
         "alt": "Escarapelas",
         "description": "Escarapelas simples o con agregados especiales."
@@ -122,7 +125,8 @@
     {
         "id": "huevocanasta",
         "name": "Huevo Canasta",
-        "category": "section3",
+        "category": "varios",
+        "subcategory": "fiestas",
         "image": "/images/products/HuevoCanasta.png",
         "alt": "Huevo Canasta",
         "description": "Canasta para pascuas con orejas de conejo. Se vende con o sin dulces."
@@ -130,7 +134,8 @@
     {
         "id": "huevocarpi",
         "name": "Huevos Conejo/Capibara",
-        "category": "section3",
+        "category": "varios",
+        "subcategory": "fiestas",
         "image": "/images/products/HuevoCarpi.jpeg",
         "alt": "Huevos Conejo o Capibara",
         "description": "Huevo conejo o capibara, con tapa. Se vende con o sin dulces."
@@ -138,7 +143,8 @@
     {
         "id": "huevocarpi-pies",
         "name": "Huevos Conejo/Capibara con Pies",
-        "category": "section3",
+        "category": "varios",
+        "subcategory": "fiestas",
         "image": "/images/products/HuevoCarpiPies.jpeg",
         "alt": "Huevos Conejo o Capibara con Pies",
         "description": "Huevo conejo o capibara, con simpáticos pies. Se vende con o sin dulces."
@@ -146,7 +152,7 @@
     {
         "id": "insigniasrigidas",
         "name": "Insignias para Fuerzas",
-        "category": "accesorios",
+        "category": "varios",
         "image": "/images/products/InsigniasRigidas.png",
         "alt": "Insignias para Fuerzas",
         "description": "Insignias rígidas para las fuerzas."
@@ -154,7 +160,7 @@
     {
         "id": "lamparapersonalizada",
         "name": "Lámpara Búho",
-        "category": "section3",
+        "category": "varios",
         "image": "/images/products/LamparaPersonalizada.jpeg",
         "alt": "Lampara Buho",
         "description": "Lámpara para colocar sobre pared. Báculo Eda, La Casa Búho."
@@ -162,7 +168,7 @@
     {
         "id": "letrascumple1",
         "name": "Letras 3D",
-        "category": "section3",
+        "category": "varios",
         "image": "/images/products/LetrasCumple1.jpeg",
         "alt": "Letras 3D",
         "description": "Letras con volumen y decoración para cumpleaños, casamientos o eventos."
@@ -170,7 +176,7 @@
     {
         "id": "letrascumple2",
         "name": "Letras 3D",
-        "category": "section3",
+        "category": "varios",
         "image": "/images/products/LetrasCumple2.jpeg",
         "alt": "Letras 3D",
         "description": "Letras con volumen y decoración para cumpleaños, casamientos o eventos."
@@ -266,7 +272,7 @@
     {
         "id": "macetascactus",
         "name": "Macetas para plantas pequeñas",
-        "category": "section3",
+        "category": "varios",
         "image": "/images/products/MacetasCactus.jpeg",
         "alt": "Macetas para suculentas",
         "description": "Macetas varios motivos ideales para cactus, suculentas o pequeñas plantas."
@@ -418,7 +424,8 @@
     {
         "id": "navidadadorno1",
         "name": "Decoración Personalizada",
-        "category": "section3",
+        "category": "varios",
+        "subcategory": "fiestas",
         "image": "/images/products/NavidadAdorno1.png",
         "alt": "Decoracion Personalizada",
         "description": "Decoración de Navidad para colgar personalizada"
@@ -426,7 +433,8 @@
     {
         "id": "navidadarbol luz",
         "name": "Árbol de Navidad",
-        "category": "section3",
+        "category": "varios",
+        "subcategory": "fiestas",
         "image": "/images/products/NavidadArbolluz.jpeg",
         "alt": "Arbol de Navidad",
         "description": "Árboles de Navidad con luz incluída."
@@ -434,7 +442,8 @@
     {
         "id": "navidadesferasnombres",
         "name": "Decoración con Nombres",
-        "category": "section3",
+        "category": "varios",
+        "subcategory": "fiestas",
         "image": "/images/products/NavidadEsferasNombres.jpeg",
         "alt": "Decoracion con Nombres",
         "description": "Esfera navideña personalizada con nombre. Ideal para decorar el árbol o regalar."
@@ -442,7 +451,8 @@
     {
         "id": "navidadpesebre1",
         "name": "Pesebre Minimalista",
-        "category": "section3",
+        "category": "varios",
+        "subcategory": "fiestas",
         "image": "/images/products/NavidadPesebre1.png",
         "alt": "Pesebre Minimalista",
         "description": "Pesebre minimalista con iluminación. Incluye vela electrónica."
@@ -450,7 +460,8 @@
     {
         "id": "navidadpesebre2024",
         "name": "Pesebre Simple",
-        "category": "section3",
+        "category": "varios",
+        "subcategory": "fiestas",
         "image": "/images/products/NavidadPesebre2024.jpeg",
         "alt": "Pesebre Simple",
         "description": "Pesebre simple con iluminación. Incluye vela electrónica"
@@ -458,7 +469,7 @@
     {
         "id": "organizador1",
         "name": "Organizador de Escritorio",
-        "category": "accesorios",
+        "category": "organizadores",
         "image": "/images/products/Organizador1.png",
         "alt": "Organizador para Escritorio",
         "description": "Organizador de escritorio con soporte para celular."
@@ -466,7 +477,7 @@
     {
         "id": "organizador2",
         "name": "Organizador de Escritorio",
-        "category": "accesorios",
+        "category": "organizadores",
         "image": "/images/products/Organizador2.png",
         "alt": "Organizador para Escritorio",
         "description": "Organizador de escritorio con soporte para celular."
@@ -474,7 +485,7 @@
     {
         "id": "organizador3",
         "name": "Caja organizadora doble",
-        "category": "accesorios",
+        "category": "organizadores",
         "image": "/images/products/Organizador3.png",
         "alt": "Caja organizadora doble",
         "description": "Organizador de dos niveles"
@@ -482,7 +493,7 @@
     {
         "id": "organizador4",
         "name": "Caja Organizadora de Viaje",
-        "category": "accesorios",
+        "category": "organizadores",
         "image": "/images/products/Organizador4.jpeg",
         "alt": "Caja organizadora de viaje",
         "description": "Estuche organizador para infusiones. Perfecto para llevar tus saquitos de té o café en viajes."
@@ -490,7 +501,7 @@
     {
         "id": "organizador5",
         "name": "Caja organizadora de viaje",
-        "category": "accesorios",
+        "category": "organizadores",
         "image": "/images/products/Organizador5.jpeg",
         "alt": "Caja organizadora de viaje",
         "description": "Estuche organizador para infusiones. Perfecto para llevar tus saquitos de té o café en viajes."
@@ -498,7 +509,7 @@
     {
         "id": "organizadorsportemate",
         "name": "Soporte para Reposera",
-        "category": "accesorios",
+        "category": "organizadores",
         "image": "/images/products/OrganizadorSoporteMate.jpeg",
         "alt": "Soporte para Reposera",
         "description": "Soporte para mate, lata o vaso para reposera o sillón plegable."
@@ -507,6 +518,7 @@
         "id": "pedidosespeciales",
         "name": "Christus",
         "category": "varios",
+        "subcategory": "pedidos-especiales",
         "image": "/images/products/PedidosEspeciales.png",
         "alt": "Christus con iluminación.",
         "description": "Figura de Christus con iluminación LED. Ideal para obsequios o decoración."
@@ -515,6 +527,7 @@
         "id": "pedidosespeciales1",
         "name": "Hormiga a Escala",
         "category": "varios",
+        "subcategory": "pedidos-especiales",
         "image": "/images/products/PedidosEspeciales1.jpeg",
         "alt": "Hormiga a escala",
         "description": "¡Hacé tu pedido! Podemos diseñar algo en particular o imprimir lo que pidas."
@@ -523,6 +536,7 @@
         "id": "pedidosespeciales2",
         "name": "Copa FIFA tamaño real",
         "category": "varios",
+        "subcategory": "pedidos-especiales",
         "image": "/images/products/PedidosEspeciales2.png",
         "alt": "Copa FIFA tamaño real",
         "description": "¡Hacé tu pedido! Podemos diseñar algo en particular o imprimir lo que pidas."
@@ -531,6 +545,7 @@
         "id": "pedidosespeciales3",
         "name": "Reactor Ironman con luz",
         "category": "varios",
+        "subcategory": "pedidos-especiales",
         "image": "/images/products/PedidosEspeciales3.jpeg",
         "alt": "Reactor Ironman con luz",
         "description": "¡Hacé tu pedido! Podemos diseñar algo en particular o imprimir lo que pidas."
@@ -539,6 +554,7 @@
         "id": "pedidosespeciales4",
         "name": "Reactor Ironman con luz",
         "category": "varios",
+        "subcategory": "pedidos-especiales",
         "image": "/images/products/PedidosEspeciales4.jpeg",
         "alt": "Reactor Ironman con luz",
         "description": "¡Hacé tu pedido! Podemos diseñar algo en particular o imprimir lo que pidas."
@@ -547,6 +563,7 @@
         "id": "pedidosespeciales5",
         "name": "Célula Vegetal",
         "category": "varios",
+        "subcategory": "pedidos-especiales",
         "image": "/images/products/PedidosEspeciales5.jpeg",
         "alt": "Impresión didactica",
         "description": "Impresión didáctica de una célula vegetal."
@@ -555,6 +572,7 @@
         "id": "pedidosespeciales7",
         "name": "Templo Salt Lake City",
         "category": "varios",
+        "subcategory": "pedidos-especiales",
         "image": "/images/products/PedidosEspeciales7.jpeg",
         "alt": "Templo Salt Lake City",
         "description": "Templo Salt Lake City. 30cm de Largo, con luz, alimentado por USB."
@@ -563,6 +581,7 @@
         "id": "pedidosespeciales8",
         "name": "DeLorean",
         "category": "varios",
+        "subcategory": "pedidos-especiales",
         "image": "/images/products/PedidosEspeciales8.jpeg",
         "alt": "DeLorean",
         "description": "Kit DeLorean para armar."
@@ -570,7 +589,7 @@
     {
         "id": "placaperro2",
         "name": "Placas para Mascotas",
-        "category": "accesorios",
+        "category": "varios",
         "image": "/images/products/PlacaPerro2.png",
         "alt": "Placas para mascotas",
         "description": "Placas para identificar a tus mascotas."
@@ -579,6 +598,7 @@
         "id": "toppertorta1",
         "name": "Toppers Día de la Madre",
         "category": "varios",
+        "subcategory": "toppers",
         "image": "/images/products/TopperTorta1.png",
         "alt": "Toppers Dia de la Madre",
         "description": "Topper decorativo para tortas. Ideal para cumpleaños y eventos especiales."
@@ -587,6 +607,7 @@
         "id": "toppertorta2",
         "name": "Toppers Día de la Madre",
         "category": "varios",
+        "subcategory": "toppers",
         "image": "/images/products/TopperTorta2.jpeg",
         "alt": "Toppers Dia de la Madre",
         "description": "Topper decorativo para tortas. Ideal para cumpleaños y eventos especiales."
@@ -595,6 +616,7 @@
         "id": "toppertorta3",
         "name": "Topper Snoopy",
         "category": "varios",
+        "subcategory": "toppers",
         "image": "/images/products/TopperTorta3.jpeg",
         "alt": "Topper Snoopy",
         "description": "Topper decorativo para tortas. Ideal para cumpleaños y eventos especiales."
@@ -603,6 +625,7 @@
         "id": "toppertorta4",
         "name": "Topper Unicornio y Arcoiris",
         "category": "varios",
+        "subcategory": "toppers",
         "image": "/images/products/TopperTorta4.jpeg",
         "alt": "Topper Unicornio y Arcoiris",
         "description": "Topper decorativo para tortas. Ideal para cumpleaños y eventos especiales."
