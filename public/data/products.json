@@ -30,6 +30,7 @@
         "id": "cartucheracarpi",
         "name": "Cartucheras",
         "category": "varios",
+        "subcategory": "otros",
         "image": "/images/products/CartucheraCarpi.jpeg",
         "alt": "Cartuchera",
         "description": "Cartuchera temática de Capibara. Ideal para guardar lápices y útiles escolares. Capacidad para 8 unidades."
@@ -38,6 +39,7 @@
         "id": "centromesa",
         "name": "Centros de Mesa",
         "category": "varios",
+        "subcategory": "otros",
         "image": "/images/products/Centromesa.jpeg",
         "alt": "Centros de Mesa",
         "description": "Centros de mesa para cumpleaños, casamientos o eventos."
@@ -46,6 +48,7 @@
         "id": "escarapelas",
         "name": "Escarapelas",
         "category": "varios",
+        "subcategory": "otros",
         "image": "/images/products/Escarapelas.png",
         "alt": "Escarapelas",
         "description": "Escarapelas simples o con agregados especiales."
@@ -153,6 +156,7 @@
         "id": "insigniasrigidas",
         "name": "Insignias para Fuerzas",
         "category": "varios",
+        "subcategory": "otros",
         "image": "/images/products/InsigniasRigidas.png",
         "alt": "Insignias para Fuerzas",
         "description": "Insignias rígidas para las fuerzas."
@@ -161,6 +165,7 @@
         "id": "lamparapersonalizada",
         "name": "Lámpara Búho",
         "category": "varios",
+        "subcategory": "otros",
         "image": "/images/products/LamparaPersonalizada.jpeg",
         "alt": "Lampara Buho",
         "description": "Lámpara para colocar sobre pared. Báculo Eda, La Casa Búho."
@@ -169,6 +174,7 @@
         "id": "letrascumple1",
         "name": "Letras 3D",
         "category": "varios",
+        "subcategory": "otros",
         "image": "/images/products/LetrasCumple1.jpeg",
         "alt": "Letras 3D",
         "description": "Letras con volumen y decoración para cumpleaños, casamientos o eventos."
@@ -177,6 +183,7 @@
         "id": "letrascumple2",
         "name": "Letras 3D",
         "category": "varios",
+        "subcategory": "otros",
         "image": "/images/products/LetrasCumple2.jpeg",
         "alt": "Letras 3D",
         "description": "Letras con volumen y decoración para cumpleaños, casamientos o eventos."
@@ -273,6 +280,7 @@
         "id": "macetascactus",
         "name": "Macetas para plantas pequeñas",
         "category": "varios",
+        "subcategory": "otros",
         "image": "/images/products/MacetasCactus.jpeg",
         "alt": "Macetas para suculentas",
         "description": "Macetas varios motivos ideales para cactus, suculentas o pequeñas plantas."
@@ -518,7 +526,7 @@
         "id": "pedidosespeciales",
         "name": "Christus",
         "category": "varios",
-        "subcategory": "pedidos-especiales",
+        "subcategory": "otros",
         "image": "/images/products/PedidosEspeciales.png",
         "alt": "Christus con iluminación.",
         "description": "Figura de Christus con iluminación LED. Ideal para obsequios o decoración."
@@ -527,7 +535,7 @@
         "id": "pedidosespeciales1",
         "name": "Hormiga a Escala",
         "category": "varios",
-        "subcategory": "pedidos-especiales",
+        "subcategory": "otros",
         "image": "/images/products/PedidosEspeciales1.jpeg",
         "alt": "Hormiga a escala",
         "description": "¡Hacé tu pedido! Podemos diseñar algo en particular o imprimir lo que pidas."
@@ -536,7 +544,7 @@
         "id": "pedidosespeciales2",
         "name": "Copa FIFA tamaño real",
         "category": "varios",
-        "subcategory": "pedidos-especiales",
+        "subcategory": "otros",
         "image": "/images/products/PedidosEspeciales2.png",
         "alt": "Copa FIFA tamaño real",
         "description": "¡Hacé tu pedido! Podemos diseñar algo en particular o imprimir lo que pidas."
@@ -545,7 +553,7 @@
         "id": "pedidosespeciales3",
         "name": "Reactor Ironman con luz",
         "category": "varios",
-        "subcategory": "pedidos-especiales",
+        "subcategory": "otros",
         "image": "/images/products/PedidosEspeciales3.jpeg",
         "alt": "Reactor Ironman con luz",
         "description": "¡Hacé tu pedido! Podemos diseñar algo en particular o imprimir lo que pidas."
@@ -554,7 +562,7 @@
         "id": "pedidosespeciales4",
         "name": "Reactor Ironman con luz",
         "category": "varios",
-        "subcategory": "pedidos-especiales",
+        "subcategory": "otros",
         "image": "/images/products/PedidosEspeciales4.jpeg",
         "alt": "Reactor Ironman con luz",
         "description": "¡Hacé tu pedido! Podemos diseñar algo en particular o imprimir lo que pidas."
@@ -563,7 +571,7 @@
         "id": "pedidosespeciales5",
         "name": "Célula Vegetal",
         "category": "varios",
-        "subcategory": "pedidos-especiales",
+        "subcategory": "otros",
         "image": "/images/products/PedidosEspeciales5.jpeg",
         "alt": "Impresión didactica",
         "description": "Impresión didáctica de una célula vegetal."
@@ -572,7 +580,7 @@
         "id": "pedidosespeciales7",
         "name": "Templo Salt Lake City",
         "category": "varios",
-        "subcategory": "pedidos-especiales",
+        "subcategory": "otros",
         "image": "/images/products/PedidosEspeciales7.jpeg",
         "alt": "Templo Salt Lake City",
         "description": "Templo Salt Lake City. 30cm de Largo, con luz, alimentado por USB."
@@ -581,7 +589,7 @@
         "id": "pedidosespeciales8",
         "name": "DeLorean",
         "category": "varios",
-        "subcategory": "pedidos-especiales",
+        "subcategory": "otros",
         "image": "/images/products/PedidosEspeciales8.jpeg",
         "alt": "DeLorean",
         "description": "Kit DeLorean para armar."
@@ -590,6 +598,7 @@
         "id": "placaperro2",
         "name": "Placas para Mascotas",
         "category": "varios",
+        "subcategory": "otros",
         "image": "/images/products/PlacaPerro2.png",
         "alt": "Placas para mascotas",
         "description": "Placas para identificar a tus mascotas."

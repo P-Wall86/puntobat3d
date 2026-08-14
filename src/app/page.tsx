@@ -28,7 +28,7 @@ export default function Page() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const productsPerPage = isMobile ? 4 : 4;
+  const productsPerPage = isMobile ? 2 : 4;
 
   useEffect(() => {
     fetch('/data/products.json')
@@ -68,8 +68,8 @@ export default function Page() {
   const subcategories = [
     { id: 'fiestas', label: 'Fiestas' },
     { id: 'carteles', label: 'Carteles' },
-    { id: 'pedidos-especiales', label: 'Pedidos' },
     { id: 'toppers', label: 'Toppers' },
+    { id: 'otros', label: 'Otros' },
   ];
 
   const goToPage = (categoryId: string, page: number) => {
@@ -148,11 +148,10 @@ export default function Page() {
                         setSelectedSubcategory(null);
                         setPageState(prev => ({ ...prev, ['varios']: 1 }));
                       }}
-                      className={`px-4 py-2 text-xs font-bold uppercase tracking-widest rounded-xl border transition text-center ${
-                        !selectedSubcategory
+                      className={`px-4 py-2 text-xs font-bold uppercase tracking-widest rounded-xl border transition text-center ${!selectedSubcategory
                           ? 'bg-[#2cb7c9] text-[#0F172A] border-[#2cb7c9] shadow-md'
                           : 'bg-[#1E293B] text-white/80 border-[#2cb7c9]/30 hover:bg-[#2cb7c9]/20 hover:border-[#2cb7c9]/60'
-                      }`}
+                        }`}
                     >
                       Todos
                     </button>
@@ -163,11 +162,10 @@ export default function Page() {
                           setSelectedSubcategory(sub.id);
                           setPageState(prev => ({ ...prev, ['varios']: 1 }));
                         }}
-                        className={`px-4 py-2 text-xs font-bold uppercase tracking-widest rounded-xl border transition text-center ${
-                          selectedSubcategory === sub.id
+                        className={`px-4 py-2 text-xs font-bold uppercase tracking-widest rounded-xl border transition text-center ${selectedSubcategory === sub.id
                             ? 'bg-[#2cb7c9] text-[#0F172A] border-[#2cb7c9] shadow-md'
                             : 'bg-[#1E293B] text-white/80 border-[#2cb7c9]/30 hover:bg-[#2cb7c9]/20 hover:border-[#2cb7c9]/60'
-                        }`}
+                          }`}
                       >
                         {sub.label}
                       </button>
@@ -175,7 +173,8 @@ export default function Page() {
                   </div>
                 </div>
               )}
-
+              
+              <div className="min-h-[300px]">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {currentProducts.map(product => (
                   <ProductCard
@@ -185,6 +184,7 @@ export default function Page() {
                     onOpenModal={() => setModalProduct(product)}
                   />
                 ))}
+              </div>
               </div>
 
               {totalPages > 1 && (
