@@ -16,6 +16,8 @@ export default function Page() {
   const [previewOpen, setPreviewOpen] = useState(false);
   const [pageState, setPageState] = useState<{ [key: string]: number }>({});
   const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
+  const [productCategoryMap, setProductCategoryMap] = useState<Map<string, string>>(new Map());
+  const [productSubcategoryMap, setProductSubcategoryMap] = useState<Map<string, string>>(new Map());
 
   const [isMobile, setIsMobile] = useState(false);
 
@@ -35,6 +37,16 @@ export default function Page() {
       .then(res => res.json())
       .then((data: Product[]) => {
         setProducts(data);
+        const categoryMap = new Map<string, string>();
+        const subcategoryMap = new Map<string, string>();
+        data.forEach(product => {
+          categoryMap.set(product.name, product.category);
+          if (product.subcategory) {
+            subcategoryMap.set(product.name, product.subcategory);
+          }
+        });
+        setProductCategoryMap(categoryMap);
+        setProductSubcategoryMap(subcategoryMap);
       })
       .catch(console.error);
   }, []);
@@ -49,10 +61,53 @@ export default function Page() {
 
   function sendWhatsApp() {
     if (selectedProducts.size === 0) return;
-    const message = encodeURIComponent(
-      "Hola! Me interesan los siguientes productos:\n- " +
-      Array.from(selectedProducts).join("\n- ")
-    );
+
+    const categoryLabels: Record<string, string> = {
+      mates: 'Mates',
+      llaveros: 'Llaveros',
+      figuras: 'Figuras',
+      organizadores: 'Organizadores',
+      varios: 'Varios',
+    };
+
+    const subcategoryLabels: Record<string, string> = {
+      fiestas: 'Fiestas',
+      carteles: 'Carteles',
+      toppers: 'Toppers',
+      otros: 'Otros',
+    };
+
+    const grouped = Array.from(selectedProducts).reduce((acc, productName) => {
+      const category = productCategoryMap.get(productName) || 'varios';
+      let groupKey = categoryLabels[category] || category;
+
+      if (category === 'varios') {
+        const subcategory = productSubcategoryMap.get(productName);
+        if (subcategory && subcategoryLabels[subcategory]) {
+          groupKey = `Varios › ${subcategoryLabels[subcategory]}`;
+        } else {
+          groupKey = 'Varios';
+        }
+      }
+
+      if (!acc[groupKey]) {
+        acc[groupKey] = [];
+      }
+      acc[groupKey].push(productName);
+      return acc;
+    }, {} as Record<string, string[]>);
+
+    // Construir el mensaje
+    let messageText = "Hola! Me interesan los siguientes productos:\n\n";
+
+    Object.entries(grouped).forEach(([group, products]) => {
+      messageText += `${group}:\n`;
+      products.forEach(product => {
+        messageText += `- ${product}\n`;
+      });
+    });
+
+    const message = encodeURIComponent(messageText.trim());
     const phone = "5493764991692";
     window.open(`https://api.whatsapp.com/send?phone=${phone}&text=${message}`, "_blank");
   }
@@ -149,8 +204,8 @@ export default function Page() {
                         setPageState(prev => ({ ...prev, ['varios']: 1 }));
                       }}
                       className={`px-4 py-2 text-xs font-bold uppercase tracking-widest rounded-xl border-2 transition text-center ${!selectedSubcategory
-                          ? 'bg-[#2cb7c9] text-[#0F172A] border-[#2cb7c9] shadow-md'
-                          : 'bg-[#1E293B]/80 text-white/90 border-[#2cb7c9]/50 hover:bg-[#2cb7c9]/20 hover:border-[#2cb7c9]'
+                        ? 'bg-[#2cb7c9] text-[#0F172A] border-[#2cb7c9] shadow-md'
+                        : 'bg-[#1E293B]/80 text-white/90 border-[#2cb7c9]/50 hover:bg-[#2cb7c9]/20 hover:border-[#2cb7c9]'
                         }`}
                     >
                       Todos
@@ -163,8 +218,8 @@ export default function Page() {
                           setPageState(prev => ({ ...prev, ['varios']: 1 }));
                         }}
                         className={`px-4 py-2 text-xs font-bold uppercase tracking-widest rounded-xl border-2 transition text-center ${selectedSubcategory === sub.id
-                            ? 'bg-[#2cb7c9] text-[#0F172A] border-[#2cb7c9] shadow-md'
-                            : 'bg-[#1E293B]/80 text-white/90 border-[#2cb7c9]/50 hover:bg-[#2cb7c9]/20 hover:border-[#2cb7c9]'
+                          ? 'bg-[#2cb7c9] text-[#0F172A] border-[#2cb7c9] shadow-md'
+                          : 'bg-[#1E293B]/80 text-white/90 border-[#2cb7c9]/50 hover:bg-[#2cb7c9]/20 hover:border-[#2cb7c9]'
                           }`}
                       >
                         {sub.label}
@@ -236,6 +291,8 @@ export default function Page() {
         {previewOpen && (
           <PreviewModal
             selectedProducts={Array.from(selectedProducts)}
+            productCategoryMap={productCategoryMap}
+            productSubcategoryMap={productSubcategoryMap}
             onClose={() => setPreviewOpen(false)}
             onRemove={toggleProduct}
             onSendWhatsApp={sendWhatsApp}
