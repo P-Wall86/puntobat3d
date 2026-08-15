@@ -34,17 +34,13 @@ export default function ProductModal({
         <div className="fixed inset-0 bg-black/85 flex items-center justify-center z-50 p-2 sm:p-4 animate-fade-in" onClick={onClose}>
             <div 
                 className="w-full max-w-[95vw] sm:max-w-[90vw] md:max-w-[650px] max-h-[95vh] sm:max-h-[90vh] bg-[#013b7b]/40 backdrop-blur-sm text-white rounded-2xl overflow-hidden shadow-2xl border border-[#2cb7c9]/20 relative flex flex-col md:flex-row md:items-stretch" 
-                onClick={(e) => e.stopPropagation()}
-            >
-                {/* Botón cerrar - más grande en mobile */}
+                onClick={(e) => e.stopPropagation()}>
                 <button 
                     onClick={onClose} 
-                    className="absolute top-2 right-2 z-20 flex h-8 w-8 sm:h-7 sm:w-7 text-base sm:text-lg items-center justify-center rounded-full border border-slate-700/50 bg-slate-900/80 text-slate-400 transition-colors hover:text-[#2cb7c9]"
-                >
+                    className="absolute top-2 right-2 z-20 flex h-8 w-8 sm:h-7 sm:w-7 text-base sm:text-lg items-center justify-center rounded-full border border-slate-700/50 bg-slate-900/80 text-slate-400 transition-colors hover:text-[#2cb7c9]">
                     ✕
                 </button>
 
-                {/* Imagen - más grande en mobile */}
                 <div className="w-full md:w-[45%] aspect-[4/3] md:aspect-auto bg-black/25 backdrop-blur-md flex items-center justify-center p-2 sm:p-3 md:p-6">
                     <img 
                         src={product.image} 
@@ -53,7 +49,6 @@ export default function ProductModal({
                     />
                 </div>
 
-                {/* Texto - centrado verticalmente en desktop */}
                 <div className="flex-1 p-3 sm:p-4 md:p-8 flex flex-col gap-2 md:gap-4 overflow-y-auto max-h-[40vh] md:max-h-none md:justify-center">
                     <h3 className="text-base sm:text-lg md:text-2xl font-bold uppercase tracking-wide text-white break-words leading-tight pr-6">
                         {product.name}

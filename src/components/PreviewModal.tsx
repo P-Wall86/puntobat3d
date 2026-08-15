@@ -1,18 +1,21 @@
 'use client';
 
 import { useEffect } from "react";
+import type { Product } from "@/types/products";
 
 type PreviewModalProps = {
-    selectedProducts: string[];
+    selectedProducts: string[]; // IDs
+    products: Product[]; // ← NUEVO: lista completa de productos
     productCategoryMap: Map<string, string>;
-    productSubcategoryMap: Map<string, string>; // ← NUEVO
+    productSubcategoryMap: Map<string, string>;
     onClose: () => void;
-    onRemove: (productName: string) => void;
+    onRemove: (productId: string) => void; // ← ahora recibe ID
     onSendWhatsApp: () => void;
 };
 
 export default function PreviewModal({
     selectedProducts,
+    products,
     productCategoryMap,
     productSubcategoryMap,
     onClose,
@@ -55,11 +58,11 @@ export default function PreviewModal({
         especiales: 'Especiales',
     };
 
-    // Función para obtener la clave de agrupamiento
-    const getGroupKey = (productName: string): string => {
-        const category = productCategoryMap.get(productName) || 'varios';
+    // Función para obtener la clave de agrupamiento (usando el producto)
+    const getGroupKey = (product: Product): string => {
+        const category = product.category || 'varios';
         if (category === 'varios') {
-            const subcategory = productSubcategoryMap.get(productName);
+            const subcategory = product.subcategory;
             if (subcategory && subcategoryLabels[subcategory]) {
                 return `Varios › ${subcategoryLabels[subcategory]}`;
             }
@@ -69,14 +72,17 @@ export default function PreviewModal({
     };
 
     // Agrupar productos por categoría (y subcategoría si es "varios")
-    const groupedProducts = selectedProducts.reduce((acc, productName) => {
-        const groupKey = getGroupKey(productName);
+    const groupedProducts = selectedProducts.reduce((acc, productId) => {
+        const product = products.find(p => p.id === productId);
+        if (!product) return acc;
+        
+        const groupKey = getGroupKey(product);
         if (!acc[groupKey]) {
             acc[groupKey] = [];
         }
-        acc[groupKey].push(productName);
+        acc[groupKey].push(product);
         return acc;
-    }, {} as Record<string, string[]>);
+    }, {} as Record<string, Product[]>);
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 px-4" onClick={onClose}>
@@ -94,19 +100,19 @@ export default function PreviewModal({
                         </p>
                     ) : (
                         <div className="max-h-72 overflow-y-auto overflow-x-hidden">
-                            {Object.entries(groupedProducts).map(([groupKey, products]) => (
+                            {Object.entries(groupedProducts).map(([groupKey, productList]) => (
                                 <div key={groupKey} className="mb-4 last:mb-0">
                                     <h4 className="text-xs font-bold uppercase tracking-wider text-[#2cb7c9] mb-2 border-b border-[#2cb7c9]/10 pb-1">
                                         {groupKey}
                                     </h4>
                                     <ul>
-                                        {products.map((productName) => (
-                                            <li key={productName} className="flex items-center justify-between py-2.5">
+                                        {productList.map((product) => (
+                                            <li key={product.id} className="flex items-center justify-between py-2.5">
                                                 <span className="pr-3 text-sm font-bold uppercase tracking-wide text-white">
-                                                    {productName}
+                                                    {product.name}
                                                 </span>
                                                 <button 
-                                                    onClick={() => onRemove(productName)} 
+                                                    onClick={() => onRemove(product.id)} 
                                                     className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full text-lg font-bold text-[#b83f55] transition-all hover:bg-[#e76f7a]/10 hover:scale-105"
                                                 >
                                                     x

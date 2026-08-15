@@ -8,6 +8,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import BackToTop from "@/components/BackToTop";
 import PreviewModal from "@/components/PreviewModal";
 import PromoCarousel from "@/components/PromoCarousel";
+import { IdCard, IdCardIcon } from 'lucide-react';
 
 export default function Page() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -51,10 +52,10 @@ export default function Page() {
       .catch(console.error);
   }, []);
 
-  function toggleProduct(name: string) {
+  function toggleProduct(id: string) {
     setSelectedProducts(prev => {
       const copy = new Set(prev);
-      copy.has(name) ? copy.delete(name) : copy.add(name);
+      copy.has(id) ? copy.delete(id) : copy.add(id);
       return copy;
     });
   }
@@ -77,12 +78,17 @@ export default function Page() {
       otros: 'Otros',
     };
 
-    const grouped = Array.from(selectedProducts).reduce((acc, productName) => {
-      const category = productCategoryMap.get(productName) || 'varios';
+    // Buscar productos por ID
+    const selectedProductObjects = Array.from(selectedProducts)
+      .map(id => products.find(p => p.id === id))
+      .filter((p): p is Product => p !== undefined);
+
+    const grouped = selectedProductObjects.reduce((acc, product) => {
+      const category = product.category || 'varios';
       let groupKey = categoryLabels[category] || category;
 
       if (category === 'varios') {
-        const subcategory = productSubcategoryMap.get(productName);
+        const subcategory = product.subcategory;
         if (subcategory && subcategoryLabels[subcategory]) {
           groupKey = `Varios › ${subcategoryLabels[subcategory]}`;
         } else {
@@ -93,11 +99,10 @@ export default function Page() {
       if (!acc[groupKey]) {
         acc[groupKey] = [];
       }
-      acc[groupKey].push(productName);
+      acc[groupKey].push(product.name);
       return acc;
     }, {} as Record<string, string[]>);
 
-    // Construir el mensaje
     let messageText = "Hola! Me interesan los siguientes productos:\n\n";
 
     Object.entries(grouped).forEach(([group, products]) => {
@@ -235,7 +240,7 @@ export default function Page() {
                     <ProductCard
                       key={product.id}
                       product={product}
-                      isSelected={selectedProducts.has(product.name)}
+                      isSelected={selectedProducts.has(product.id)}
                       onOpenModal={() => setModalProduct(product)}
                     />
                   ))}
@@ -280,9 +285,9 @@ export default function Page() {
         {modalProduct && (
           <ProductModal
             product={modalProduct}
-            isSelected={selectedProducts.has(modalProduct.name)}
+            isSelected={selectedProducts.has(modalProduct.id)}
             onClose={() => setModalProduct(null)}
-            onToggle={() => toggleProduct(modalProduct.name)}
+            onToggle={() => toggleProduct(modalProduct.id)}
           />
         )}
 
@@ -291,6 +296,7 @@ export default function Page() {
         {previewOpen && (
           <PreviewModal
             selectedProducts={Array.from(selectedProducts)}
+            products={products}
             productCategoryMap={productCategoryMap}
             productSubcategoryMap={productSubcategoryMap}
             onClose={() => setPreviewOpen(false)}

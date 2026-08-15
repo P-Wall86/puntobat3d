@@ -353,16 +353,16 @@
     },
     {
         "id": "cartel2",
-        "name": "Cartel Para Pared",
+        "name": "Empresarial",
         "category": "varios",
         "subcategory": "carteles",
         "image": "/images/products/Cartel2.jpeg",
         "alt": "Cartel",
-        "description": "Cartel para amurar sobre pared."
+        "description": "Cartel identificatorio para negocios. Para fijar a la pared con tornillos o adhesivo."
     },
     {
         "id": "cartelluminoso",
-        "name": "Cartel Luminoso",
+        "name": "Luminoso",
         "category": "varios",
         "subcategory": "carteles",
         "image": "/images/products/CartelLuminoso.png",
@@ -371,7 +371,7 @@
     },
     {
         "id": "cartelqr",
-        "name": "Cartel con QR",
+        "name": "Con QR",
         "category": "varios",
         "subcategory": "carteles",
         "image": "/images/products/CartelQR.jpeg",
