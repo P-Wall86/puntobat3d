@@ -148,9 +148,9 @@ export default function Page() {
                         setSelectedSubcategory(null);
                         setPageState(prev => ({ ...prev, ['varios']: 1 }));
                       }}
-                      className={`px-4 py-2 text-xs font-bold uppercase tracking-widest rounded-xl border transition text-center ${!selectedSubcategory
+                      className={`px-4 py-2 text-xs font-bold uppercase tracking-widest rounded-xl border-2 transition text-center ${!selectedSubcategory
                           ? 'bg-[#2cb7c9] text-[#0F172A] border-[#2cb7c9] shadow-md'
-                          : 'bg-[#1E293B] text-white/80 border-[#2cb7c9]/30 hover:bg-[#2cb7c9]/20 hover:border-[#2cb7c9]/60'
+                          : 'bg-[#1E293B]/80 text-white/90 border-[#2cb7c9]/50 hover:bg-[#2cb7c9]/20 hover:border-[#2cb7c9]'
                         }`}
                     >
                       Todos
@@ -162,9 +162,9 @@ export default function Page() {
                           setSelectedSubcategory(sub.id);
                           setPageState(prev => ({ ...prev, ['varios']: 1 }));
                         }}
-                        className={`px-4 py-2 text-xs font-bold uppercase tracking-widest rounded-xl border transition text-center ${selectedSubcategory === sub.id
+                        className={`px-4 py-2 text-xs font-bold uppercase tracking-widest rounded-xl border-2 transition text-center ${selectedSubcategory === sub.id
                             ? 'bg-[#2cb7c9] text-[#0F172A] border-[#2cb7c9] shadow-md'
-                            : 'bg-[#1E293B] text-white/80 border-[#2cb7c9]/30 hover:bg-[#2cb7c9]/20 hover:border-[#2cb7c9]/60'
+                            : 'bg-[#1E293B]/80 text-white/90 border-[#2cb7c9]/50 hover:bg-[#2cb7c9]/20 hover:border-[#2cb7c9]'
                           }`}
                       >
                         {sub.label}
@@ -173,18 +173,18 @@ export default function Page() {
                   </div>
                 </div>
               )}
-              
+
               <div className="flex flex-col min-h-[200px] sm:min-h-[300px]">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {currentProducts.map(product => (
-                  <ProductCard
-                    key={product.id}
-                    product={product}
-                    isSelected={selectedProducts.has(product.name)}
-                    onOpenModal={() => setModalProduct(product)}
-                  />
-                ))}
-              </div>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                  {currentProducts.map(product => (
+                    <ProductCard
+                      key={product.id}
+                      product={product}
+                      isSelected={selectedProducts.has(product.name)}
+                      onOpenModal={() => setModalProduct(product)}
+                    />
+                  ))}
+                </div>
               </div>
 
               {totalPages > 1 && (
