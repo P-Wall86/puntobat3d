@@ -1,5 +1,357 @@
 [
     {
+        "id": "matecolores",
+        "name": "Simples",
+        "category": "mates",
+        "image": "/images/products/MateColores.jpg",
+        "alt": "Mates simples",
+        "description": "Mate simple de varios colores. Incluye inserto interior y soporta agua fría y caliente."
+    },
+    {
+        "id": "mateempresa1",
+        "name": "Geométrico empresarial",
+        "category": "mates",
+        "image": "/images/products/MateEmpresa1.jpeg",
+        "alt": "Mate geometrico con logo",
+        "description": "Mate personalizado con tu diseño o logo de tu empresa. Incluye inserto interior y soporta agua fría y caliente."
+    },
+    {
+        "id": "mateempresa2",
+        "name": "Geométrico empresarial",
+        "category": "mates",
+        "image": "/images/products/MateEmpresa2.jpeg",
+        "alt": "Mate geometrico con logo",
+        "description": "Mate personalizado con tu diseño o logo de tu empresa. Incluye inserto interior y soporta agua fría y caliente."
+    },
+    {
+        "id": "matefutbol",
+        "name": "Futboleros",
+        "category": "mates",
+        "image": "/images/products/MateFutbol.png",
+        "alt": "Mates Futboleros",
+        "description": "Mate personalizado con el escudo de tu equipo. Incluye inserto interior y soporta agua fría y caliente."
+    },
+    {
+        "id": "mategroot",
+        "name": "Groot",
+        "category": "mates",
+        "image": "/images/products/MateGroot.jpg",
+        "alt": "Mates Groot",
+        "description": "Mate personalizado Groot. Incluye inserto interior y soporta agua fría y caliente."
+    },
+    {
+        "id": "matepotter",
+        "name": "Harry Potter",
+        "category": "mates",
+        "image": "/images/products/MatePotter.jpg",
+        "alt": "Mate Potter",
+        "description": "Mate personalizado Harry Potter. Incluye inserto interior y soporta agua fría y caliente."
+    },
+    {
+        "id": "matepotter2",
+        "name": "Geométrico Harry Potter",
+        "category": "mates",
+        "image": "/images/products/MatePotter2.jpeg",
+        "alt": "Mate Potter",
+        "description": "Mate personalizado Harry Potter. Incluye inserto interior y soporta agua fría y caliente."
+    },
+    {
+        "id": "matespersonalizados",
+        "name": "Días especiales",
+        "category": "mates",
+        "image": "/images/products/MatesPersonalizados.jpg",
+        "alt": "Mate para días especiales",
+        "description": "Mate personalizado para regalar en días especiales. Incluye inserto interior y soporta agua fría y caliente."
+    },
+    {
+        "id": "matespersonalizados3",
+        "name": "Pew Pew",
+        "category": "mates",
+        "image": "/images/products/MatesPersonalizados3.jpeg",
+        "alt": "Mate pew pew",
+        "description": "Mate personalizado Pew Pew. Incluye inserto interior y soporta agua fría y caliente."
+    },
+    {
+        "id": "matespersonalizados4",
+        "name": "Calamaro",
+        "category": "mates",
+        "image": "/images/products/MatesPersonalizados4.jpeg",
+        "alt": "Mate Calamaro",
+        "description": "Mate personalizado Calamaro. Incluye inserto interior y soporta agua fría y caliente."
+    },
+    {
+        "id": "matesregionales",
+        "name": "Regionales",
+        "category": "mates",
+        "image": "/images/products/MatesRegionales.jpg",
+        "alt": "Mates Regionales",
+        "description": "Mate personalizado con animales de la región. Incluye inserto interior y soporta agua fría y caliente."
+    },
+    {
+        "id": "mateterminador",
+        "name": "Terminator",
+        "category": "mates",
+        "image": "/images/products/MateTerminator.jpg",
+        "alt": "Mate Terminator con iluminacion",
+        "description": "Mate personalizado Terminator. Incluye inserto interior e iluminación LED. Soporta agua fría y caliente."
+    },
+    {
+        "id": "metespersonalizados2",
+        "name": "Geométrico Naruto",
+        "category": "mates",
+        "image": "/images/products/MetesPersonalizados2.jpeg",
+        "alt": "Mate Naruto",
+        "description": "Mate personalizado Naruto. Incluye inserto interior y soporta agua fría y caliente."
+    },
+    {
+        "id": "metespersonalizados3",
+        "name": "Beatles",
+        "category": "mates",
+        "image": "/images/products/MetesPersonalizados3.jpeg",
+        "alt": "Mate Los Beatles",
+        "description": "Mate personalizado Beatles. Incluye inserto interior y soporta agua fría y caliente."
+    },
+    {
+        "id": "metespersonalizados4",
+        "name": "Lata de Coca",
+        "category": "mates",
+        "image": "/images/products/MetesPersonalizados4.jpeg",
+        "alt": "Mate Lata de Coca",
+        "description": "Mate personalizado Lata de Coca. Incluye inserto interior y soporta agua fría y caliente."
+    },
+    {
+        "id": "metespersonalizados5",
+        "name": "Con Nombres",
+        "category": "mates",
+        "image": "/images/products/MetesPersonalizados5.jpeg",
+        "alt": "Mate con Nombres",
+        "description": "Mate personalizado con tu nombre. Incluye inserto interior y soporta agua fría y caliente."
+    },
+    {
+        "id": "matespersonalizadosluz",
+        "name": "Con luz para cebar",
+        "category": "mates",
+        "image": "/images/products/MetesPersonalizadosLuz.jpeg",
+        "alt": "Mate con luz para Cebar",
+        "description": "Mate personalizado. Incluye inserto interior, luz para bombilla y soporta agua fría y caliente."
+    },
+    {
+        "id": "metestapa",
+        "name": "Con Tapa",
+        "category": "mates",
+        "image": "/images/products/MetesTapa.jpeg",
+        "alt": "Mate con Tapa",
+        "description": "Mate personalizado con tu diseño o logo. Incluye inserto interior, tapa y soporta agua fría y caliente."
+    },
+    {
+        "id": "llaverocumpleanos",
+        "name": "Nube Arcoiris",
+        "category": "llaveros",
+        "image": "/images/products/LlaveroCumpleaños.jpeg",
+        "alt": "Llavero Nube Arcoiris",
+        "description": "Llaveros para souvenir de cumpleaños y eventos especiales"
+    },
+    {
+        "id": "llaveroscumpleanos2",
+        "name": "Placa con nombre",
+        "category": "llaveros",
+        "image": "/images/products/LlaverosCumpleaños2.png",
+        "alt": "Llaveros con placa con nombre",
+        "description": "Llaveros para souvenir de cumpleaños y eventos especiales."
+    },
+    {
+        "id": "llaveronombre",
+        "name": "Nombre Flexi",
+        "category": "llaveros",
+        "image": "/images/products/LlaveroNombre.png",
+        "alt": "Llavero Nombre Flexi",
+        "description": "Llaveros flexibles con nombre."
+    },
+    {
+        "id": "llaveroscarpi",
+        "name": "Capibara",
+        "category": "llaveros",
+        "image": "/images/products/LlaverosCarpi.jpeg",
+        "alt": "Llavero Capibara",
+        "description": "Llaveros de capibara, con motivos varios"
+    },
+    {
+        "id": "llaveroscarpi-png",
+        "name": "Capibara Argentina",
+        "category": "llaveros",
+        "image": "/images/products/LlaverosCarpi.png",
+        "alt": "Llavero Capibara Argentina",
+        "description": "Llaveros de capibara, con motivo de Selección Argentina."
+    },
+    {
+        "id": "llaverosempresa",
+        "name": "Empresarial",
+        "category": "llaveros",
+        "image": "/images/products/LlaverosEmpresa.jpeg",
+        "alt": "Llaveros para regalo con tu logo",
+        "description": "Llaveros para regalo con el logo de tu empresa."
+    },
+    {
+        "id": "llaverosempresa1",
+        "name": "Empresarial",
+        "category": "llaveros",
+        "image": "/images/products/LlaverosEmpresa1.jpeg",
+        "alt": "Llaveros para regalo con tu logo",
+        "description": "Llaveros para regalo con el logo de tu empresa."
+    },
+    {
+        "id": "llaverosempresa2",
+        "name": "Empresarial",
+        "category": "llaveros",
+        "image": "/images/products/LlaverosEmpresa2.jpeg",
+        "alt": "Llaveros para regalo con tu logo",
+        "description": "Llaveros para regalo con el logo de tu empresa."
+    },
+    {
+        "id": "llaverosflorks",
+        "name": "Florks",
+        "category": "llaveros",
+        "image": "/images/products/LlaverosFlorks.png",
+        "alt": "Llaveros Florks varios",
+        "description": "Llaveros de Florks, con motivos varios"
+    },
+    {
+        "id": "llaverosfutbol",
+        "name": "Destapador para lata",
+        "category": "llaveros",
+        "image": "/images/products/LlaverosFutbol.png",
+        "alt": "Llaveros destapador",
+        "description": "Llavero destapador para lata, con motivos varios."
+    },
+    {
+        "id": "llaverossud",
+        "name": "Llaveros SUD",
+        "category": "llaveros",
+        "image": "/images/products/LlaverosSUD.jpeg",
+        "alt": "Llavero SUD",
+        "description": "Llaveros SUD de motivos varios."
+    },
+    {
+        "id": "figura2",
+        "name": "Ludens",
+        "category": "figuras",
+        "image": "/images/products/Figura2.png",
+        "alt": "Ludens",
+        "description": "Figuras a pedido de tamaños varios. Consulte por modelos y tamaños."
+    },
+    {
+        "id": "figura1",
+        "name": "Ludens",
+        "category": "figuras",
+        "image": "/images/products/Figura1.png",
+        "alt": "Ludens",
+        "description": "Figuras a pedido de tamaños varios. Consulte por modelos y tamaños."
+    },
+    {
+        "id": "figura3",
+        "name": "Chimuelo Urbano",
+        "category": "figuras",
+        "image": "/images/products/Figura3.jpg",
+        "alt": "Chimuelo Urbano",
+        "description": "Figuras a pedido de tamaños varios. Consulte por modelos y tamaños."
+    },
+    {
+        "id": "figura5",
+        "name": "Stitch Urbano",
+        "category": "figuras",
+        "image": "/images/products/Figura5.jpg",
+        "alt": "Stich Urbano",
+        "description": "Figuras a pedido de tamaños varios. Consulte por modelos y tamaños."
+    },
+    {
+        "id": "figura6",
+        "name": "Dummy 13 (con caja)",
+        "category": "figuras",
+        "image": "/images/products/Figura6.png",
+        "alt": "Dummy 13 con caja",
+        "description": "Figura articulada Dummy 13. Ideal para coleccionistas. Consultanos por colores y tamaños disponibles."
+    },
+    {
+        "id": "figura7",
+        "name": "Dummy 13 (con caja)",
+        "category": "figuras",
+        "image": "/images/products/Figura7.png",
+        "alt": "Dummy 13 con caja",
+        "description": "Figura articulada Dummy 13. Ideal para coleccionistas. Consultanos por colores y tamaños disponibles."
+    },
+    {
+        "id": "figura9",
+        "name": "Dragón",
+        "category": "figuras",
+        "image": "/images/products/Figura9.png",
+        "alt": "Dragon",
+        "description": "Figuras a pedido de tamaños varios. Consulte por modelos y tamaños."
+    },
+    {
+        "id": "figura4",
+        "name": "Nefi Rompe su Arco",
+        "category": "figuras",
+        "image": "/images/products/Figura4.png",
+        "alt": "Nefi Rompe su Arco",
+        "description": "Figuras a pedido de tamaños varios. Consulte por modelos y tamaños."
+    },
+    {
+        "id": "figura8",
+        "name": "Figuras Minecraft articulados",
+        "category": "figuras",
+        "image": "/images/products/Figura8.jpeg",
+        "alt": "Figuras Minecraft articulados",
+        "description": "Figuras a pedido de tamaños varios. Consulte por modelos y tamaños."
+    },
+    {
+        "id": "organizador1",
+        "name": "De Escritorio",
+        "category": "organizadores",
+        "image": "/images/products/Organizador1.png",
+        "alt": "Organizador para Escritorio",
+        "description": "Organizador de escritorio con soporte para celular."
+    },
+    {
+        "id": "organizador2",
+        "name": "De Escritorio",
+        "category": "organizadores",
+        "image": "/images/products/Organizador2.png",
+        "alt": "Organizador para Escritorio",
+        "description": "Organizador de escritorio con soporte para celular."
+    },
+    {
+        "id": "organizador4",
+        "name": "Caja de viaje",
+        "category": "organizadores",
+        "image": "/images/products/Organizador4.jpeg",
+        "alt": "Caja organizadora de viaje",
+        "description": "Estuche organizador para infusiones. Perfecto para llevar tus saquitos de té o café en viajes."
+    },
+    {
+        "id": "organizador5",
+        "name": "Caja de viaje",
+        "category": "organizadores",
+        "image": "/images/products/Organizador5.jpeg",
+        "alt": "Caja organizadora de viaje",
+        "description": "Estuche organizador para infusiones. Perfecto para llevar tus saquitos de té o café en viajes."
+    },
+    {
+        "id": "organizador3",
+        "name": "De dos niveles",
+        "category": "organizadores",
+        "image": "/images/products/Organizador3.png",
+        "alt": "Caja organizadora doble",
+        "description": "Caja organizadora de dos niveles."
+    },
+    {
+        "id": "organizadorsportemate",
+        "name": "Soporte para Reposera",
+        "category": "organizadores",
+        "image": "/images/products/OrganizadorSoporteMate.jpeg",
+        "alt": "Soporte para Reposera",
+        "description": "Soporte para mate, lata o vaso para reposera o sillón plegable."
+    },
+    {
         "id": "cartel2",
         "name": "Cartel Para Pared",
         "category": "varios",
@@ -54,78 +406,6 @@
         "description": "Escarapelas simples o con agregados especiales."
     },
     {
-        "id": "figura2",
-        "name": "Ludens",
-        "category": "figuras",
-        "image": "/images/products/Figura2.png",
-        "alt": "Ludens",
-        "description": "Figuras a pedido de tamaños varios. Consulte por modelos y tamaños."
-    },
-    {
-        "id": "figura3",
-        "name": "Chimuelo Urbano",
-        "category": "figuras",
-        "image": "/images/products/Figura3.jpg",
-        "alt": "Chimuelo Urbano",
-        "description": "Figuras a pedido de tamaños varios. Consulte por modelos y tamaños."
-    },
-    {
-        "id": "figura5",
-        "name": "Stitch Urbano",
-        "category": "figuras",
-        "image": "/images/products/Figura5.jpg",
-        "alt": "Stich Urbano",
-        "description": "Figuras a pedido de tamaños varios. Consulte por modelos y tamaños."
-    },
-    {
-        "id": "figura6",
-        "name": "Dummy 13 (con caja)",
-        "category": "figuras",
-        "image": "/images/products/Figura6.png",
-        "alt": "Dummy 13 con caja",
-        "description": "Figura articulada Dummy 13. Ideal para coleccionistas. Consultanos por colores y tamaños disponibles."
-    },
-    {
-        "id": "figura7",
-        "name": "Dummy 13 (con caja)",
-        "category": "figuras",
-        "image": "/images/products/Figura7.png",
-        "alt": "Dummy 13 con caja",
-        "description": "Figura articulada Dummy 13. Ideal para coleccionistas. Consultanos por colores y tamaños disponibles."
-    },
-    {
-        "id": "figura9",
-        "name": "Dragón",
-        "category": "figuras",
-        "image": "/images/products/Figura9.png",
-        "alt": "Dragon",
-        "description": "Figuras a pedido de tamaños varios. Consulte por modelos y tamaños."
-    },
-    {
-        "id": "figura1",
-        "name": "Ludens",
-        "category": "figuras",
-        "image": "/images/products/Figura1.png",
-        "alt": "Ludens",
-        "description": "Figuras a pedido de tamaños varios. Consulte por modelos y tamaños."
-    },
-    {
-        "id": "figura4",
-        "name": "Nefi Rompe su Arco",
-        "category": "figuras",
-        "image": "/images/products/Figura4.png",
-        "alt": "Nefi Rompe su Arco",
-        "description": "Figuras a pedido de tamaños varios. Consulte por modelos y tamaños."
-    },
-    {
-        "id": "figura8",
-        "name": "Figuras Minecraft articulados",
-        "category": "figuras",
-        "image": "/images/products/Figura8.jpeg",
-        "alt": "Figuras Minecraft articulados",
-        "description": "Figuras a pedido de tamaños varios. Consulte por modelos y tamaños."
-    },
-    {
         "id": "huevocanasta",
         "name": "Huevo Canasta",
         "category": "varios",
@@ -154,7 +434,7 @@
     },
     {
         "id": "insigniasrigidas",
-        "name": "Insignias para Fuerzas",
+        "name": "Insignias Rígidas",
         "category": "varios",
         "subcategory": "otros",
         "image": "/images/products/InsigniasRigidas.png",
@@ -189,94 +469,6 @@
         "description": "Letras con volumen y decoración para cumpleaños, casamientos o eventos."
     },
     {
-        "id": "llaverocumpleanos",
-        "name": "Nube Arcoiris",
-        "category": "llaveros",
-        "image": "/images/products/LlaveroCumpleaños.jpeg",
-        "alt": "Llavero Nube Arcoiris",
-        "description": "Llaveros para souvenirs"
-    },
-    {
-        "id": "llaveronombre",
-        "name": "Nombre Flexi",
-        "category": "llaveros",
-        "image": "/images/products/LlaveroNombre.png",
-        "alt": "Llavero Nombre Flexi",
-        "description": "Llaveros de motivos varios"
-    },
-    {
-        "id": "llaveroscarpi",
-        "name": "Capibara",
-        "category": "llaveros",
-        "image": "/images/products/LlaverosCarpi.jpeg",
-        "alt": "Llavero Capibara",
-        "description": "Llaveros de motivos varios"
-    },
-    {
-        "id": "llaveroscarpi-png",
-        "name": "Capibara Argentina",
-        "category": "llaveros",
-        "image": "/images/products/LlaverosCarpi.png",
-        "alt": "Llavero Capibara Argentina",
-        "description": "Llaveros empresariales"
-    },
-    {
-        "id": "llaveroscumpleanos2",
-        "name": "Con placa con nombre",
-        "category": "llaveros",
-        "image": "/images/products/LlaverosCumpleaños2.png",
-        "alt": "Llaveros con placa con nombre",
-        "description": "Llaveros para souvenirs"
-    },
-    {
-        "id": "llaverosempresa",
-        "name": "Empresariales",
-        "category": "llaveros",
-        "image": "/images/products/LlaverosEmpresa.jpeg",
-        "alt": "Llaveros para regalo con tu logo",
-        "description": "Llaveros para regalo con el logo de tu empresa."
-    },
-    {
-        "id": "llaverosempresa1",
-        "name": "Empresariales",
-        "category": "llaveros",
-        "image": "/images/products/LlaverosEmpresa1.jpeg",
-        "alt": "Llaveros para regalo con tu logo",
-        "description": "Llaveros para regalo con el logo de tu empresa."
-    },
-    {
-        "id": "llaverosempresa2",
-        "name": "Empresariales",
-        "category": "llaveros",
-        "image": "/images/products/LlaverosEmpresa2.jpeg",
-        "alt": "Llaveros para regalo con tu logo",
-        "description": "Llaveros para regalo con el logo de tu empresa."
-    },
-    {
-        "id": "llaverosflorks",
-        "name": "Florks",
-        "category": "llaveros",
-        "image": "/images/products/LlaverosFlorks.png",
-        "alt": "Llaveros Florks varios",
-        "description": "Llaveros de motivos varios"
-    },
-    {
-        "id": "llaverosfutbol",
-        "name": "Llaveros destapador para lata.",
-        "category": "llaveros",
-        "image": "/images/products/LlaverosFutbol.png",
-        "alt": "Llaveros destapador",
-        "description": "Llaveros de motivos varios."
-    },
-    {
-        "id": "llaverossud",
-        "name": "Llaveros SUD",
-        "category": "llaveros",
-        "image": "/images/products/LlaverosSUD.jpeg",
-        "alt": "Llavero SUD",
-        "description": "Llaveros de motivos varios."
-    },
-    {
         "id": "macetascactus",
         "name": "Macetas para plantas pequeñas",
         "category": "varios",
@@ -284,159 +476,6 @@
         "image": "/images/products/MacetasCactus.jpeg",
         "alt": "Macetas para suculentas",
         "description": "Macetas varios motivos ideales para cactus, suculentas o pequeñas plantas."
-    },
-    {
-        "id": "matecolores",
-        "name": "Simples",
-        "category": "mates",
-        "image": "/images/products/MateColores.jpg",
-        "alt": "Mates simples",
-        "description": "Mate personalizado con tu diseño o logo. Incluye inserto interior y soporta agua fría y caliente."
-    },
-    {
-        "id": "mateempresa1",
-        "name": "Geométrico empresarial",
-        "category": "mates",
-        "image": "/images/products/MateEmpresa1.jpeg",
-        "alt": "Mate geometrico con logo",
-        "description": "Mate personalizado con tu diseño o logo. Incluye inserto interior y soporta agua fría y caliente."
-    },
-    {
-        "id": "mateempresa2",
-        "name": "Geométrico empresarial",
-        "category": "mates",
-        "image": "/images/products/MateEmpresa2.jpeg",
-        "alt": "Mate geometrico con logo",
-        "description": "Mate personalizado con tu diseño o logo. Incluye inserto interior y soporta agua fría y caliente."
-    },
-    {
-        "id": "matefutbol",
-        "name": "Futboleros",
-        "category": "mates",
-        "image": "/images/products/MateFutbol.png",
-        "alt": "Mates Futboleros",
-        "description": "Mate personalizado con tu diseño o logo. Incluye inserto interior y soporta agua fría y caliente."
-    },
-    {
-        "id": "mategroot",
-        "name": "Groot",
-        "category": "mates",
-        "image": "/images/products/MateGroot.jpg",
-        "alt": "Mates Groot",
-        "description": "Mate personalizado con tu diseño o logo. Incluye inserto interior y soporta agua fría y caliente."
-    },
-    {
-        "id": "matepotter",
-        "name": "Harry Potter",
-        "category": "mates",
-        "image": "/images/products/MatePotter.jpg",
-        "alt": "Mate Potter",
-        "description": "Mate personalizado con tu diseño o logo. Incluye inserto interior y soporta agua fría y caliente."
-    },
-    {
-        "id": "matepotter2",
-        "name": "Geométrico Harry Potter",
-        "category": "mates",
-        "image": "/images/products/MatePotter2.jpeg",
-        "alt": "Mate Potter",
-        "description": "Mate personalizado con tu diseño o logo. Incluye inserto interior y soporta agua fría y caliente."
-    },
-    {
-        "id": "matespersonalizados",
-        "name": "Días especiales",
-        "category": "mates",
-        "image": "/images/products/MatesPersonalizados.jpg",
-        "alt": "Mate para días especiales",
-        "description": "Mate personalizado con tu diseño o logo. Incluye inserto interior y soporta agua fría y caliente."
-    },
-    {
-        "id": "matespersonalizados3",
-        "name": "Pew Pew",
-        "category": "mates",
-        "image": "/images/products/MatesPersonalizados3.jpeg",
-        "alt": "Mate pew pew",
-        "description": "Mate personalizado con tu diseño o logo. Incluye inserto interior y soporta agua fría y caliente."
-    },
-    {
-        "id": "matespersonalizados4",
-        "name": "Calamaro",
-        "category": "mates",
-        "image": "/images/products/MatesPersonalizados4.jpeg",
-        "alt": "Mate Calamaro",
-        "description": "Mate personalizado con tu diseño o logo. Incluye inserto interior y soporta agua fría y caliente."
-    },
-    {
-        "id": "matesregionales",
-        "name": "Regionales",
-        "category": "mates",
-        "image": "/images/products/MatesRegionales.jpg",
-        "alt": "Mates Regionales",
-        "description": "Mate personalizado con tu diseño o logo. Incluye inserto interior y soporta agua fría y caliente."
-    },
-    {
-        "id": "mateterminador",
-        "name": "Terminator",
-        "category": "mates",
-        "image": "/images/products/MateTerminator.jpg",
-        "alt": "Mate Terminator con iluminacion",
-        "description": "Mate personalizado. Incluye inserto interior e iluminación LED. Soporta agua fría y caliente."
-    },
-    {
-        "id": "metespersonalizados2",
-        "name": "Geométrico Naruto",
-        "category": "mates",
-        "image": "/images/products/MetesPersonalizados2.jpeg",
-        "alt": "Mate Naruto",
-        "description": "Mate personalizado con tu diseño o logo. Incluye inserto interior y soporta agua fría y caliente."
-    },
-    {
-        "id": "metespersonalizados3",
-        "name": "Beatles",
-        "category": "mates",
-        "image": "/images/products/MetesPersonalizados3.jpeg",
-        "alt": "Mate Los Beatles",
-        "description": "Mate personalizado con tu diseño o logo. Incluye inserto interior y soporta agua fría y caliente."
-    },
-    {
-        "id": "metespersonalizados4",
-        "name": "Lata de Coca",
-        "category": "mates",
-        "image": "/images/products/MetesPersonalizados4.jpeg",
-        "alt": "Mate Lata de Coca",
-        "description": "Mate personalizado con tu diseño o logo. Incluye inserto interior y soporta agua fría y caliente."
-    },
-    {
-        "id": "metespersonalizados5",
-        "name": "Nombres",
-        "category": "mates",
-        "image": "/images/products/MetesPersonalizados5.jpeg",
-        "alt": "Mate con Nombres",
-        "description": "Mate personalizado con tu diseño o logo. Incluye inserto interior y soporta agua fría y caliente."
-    },
-    {
-        "id": "matespersonalizadosluz",
-        "name": "Con luz para cebar",
-        "category": "mates",
-        "image": "/images/products/MetesPersonalizadosLuz.jpeg",
-        "alt": "Mate con luz para Cebar",
-        "description": "Mate personalizado con tu diseño o logo. Incluye inserto interior, luz para bombilla y soporta agua fría y caliente."
-    },
-    {
-        "id": "metestapa",
-        "name": "Con Tapa",
-        "category": "mates",
-        "image": "/images/products/MetesTapa.jpeg",
-        "alt": "Mate con Tapa",
-        "description": "Mate personalizado con tu diseño o logo. Incluye inserto interior, tapa y soporta agua fría y caliente."
-    },
-    {
-        "id": "navidadadorno1",
-        "name": "Decoración Personalizada",
-        "category": "varios",
-        "subcategory": "fiestas",
-        "image": "/images/products/NavidadAdorno1.png",
-        "alt": "Decoracion Personalizada",
-        "description": "Decoración de Navidad para colgar personalizada"
     },
     {
         "id": "navidadarbol luz",
@@ -448,8 +487,17 @@
         "description": "Árboles de Navidad con luz incluída."
     },
     {
+        "id": "navidadadorno1",
+        "name": "Adorno Personalizado",
+        "category": "varios",
+        "subcategory": "fiestas",
+        "image": "/images/products/NavidadAdorno1.png",
+        "alt": "Adorno Personalizado",
+        "description": "Decoración de Navidad para colgar."
+    },
+    {
         "id": "navidadesferasnombres",
-        "name": "Decoración con Nombres",
+        "name": "Adorno con Nombres",
         "category": "varios",
         "subcategory": "fiestas",
         "image": "/images/products/NavidadEsferasNombres.jpeg",
@@ -467,60 +515,12 @@
     },
     {
         "id": "navidadpesebre2024",
-        "name": "Pesebre Simple",
+        "name": "Pesebre Minimalista",
         "category": "varios",
         "subcategory": "fiestas",
         "image": "/images/products/NavidadPesebre2024.jpeg",
-        "alt": "Pesebre Simple",
-        "description": "Pesebre simple con iluminación. Incluye vela electrónica"
-    },
-    {
-        "id": "organizador1",
-        "name": "Organizador de Escritorio",
-        "category": "organizadores",
-        "image": "/images/products/Organizador1.png",
-        "alt": "Organizador para Escritorio",
-        "description": "Organizador de escritorio con soporte para celular."
-    },
-    {
-        "id": "organizador2",
-        "name": "Organizador de Escritorio",
-        "category": "organizadores",
-        "image": "/images/products/Organizador2.png",
-        "alt": "Organizador para Escritorio",
-        "description": "Organizador de escritorio con soporte para celular."
-    },
-    {
-        "id": "organizador3",
-        "name": "Caja organizadora doble",
-        "category": "organizadores",
-        "image": "/images/products/Organizador3.png",
-        "alt": "Caja organizadora doble",
-        "description": "Organizador de dos niveles"
-    },
-    {
-        "id": "organizador4",
-        "name": "Caja Organizadora de Viaje",
-        "category": "organizadores",
-        "image": "/images/products/Organizador4.jpeg",
-        "alt": "Caja organizadora de viaje",
-        "description": "Estuche organizador para infusiones. Perfecto para llevar tus saquitos de té o café en viajes."
-    },
-    {
-        "id": "organizador5",
-        "name": "Caja organizadora de viaje",
-        "category": "organizadores",
-        "image": "/images/products/Organizador5.jpeg",
-        "alt": "Caja organizadora de viaje",
-        "description": "Estuche organizador para infusiones. Perfecto para llevar tus saquitos de té o café en viajes."
-    },
-    {
-        "id": "organizadorsportemate",
-        "name": "Soporte para Reposera",
-        "category": "organizadores",
-        "image": "/images/products/OrganizadorSoporteMate.jpeg",
-        "alt": "Soporte para Reposera",
-        "description": "Soporte para mate, lata o vaso para reposera o sillón plegable."
+        "alt": "Pesebre Minimalista",
+        "description": "Pesebre minimalista con iluminación. Incluye vela electrónica"
     },
     {
         "id": "pedidosespeciales",
@@ -583,7 +583,7 @@
         "subcategory": "otros",
         "image": "/images/products/PedidosEspeciales7.jpeg",
         "alt": "Templo Salt Lake City",
-        "description": "Templo Salt Lake City. 30cm de Largo, con luz, alimentado por USB."
+        "description": "Templo de Salt Lake City. 30cm de Largo, con luz, alimentado por USB."
     },
     {
         "id": "pedidosespeciales8",
@@ -605,7 +605,7 @@
     },
     {
         "id": "toppertorta1",
-        "name": "Toppers Día de la Madre",
+        "name": "Día de la Madre",
         "category": "varios",
         "subcategory": "toppers",
         "image": "/images/products/TopperTorta1.png",
@@ -614,7 +614,7 @@
     },
     {
         "id": "toppertorta2",
-        "name": "Toppers Día de la Madre",
+        "name": "Día de la Madre",
         "category": "varios",
         "subcategory": "toppers",
         "image": "/images/products/TopperTorta2.jpeg",
@@ -623,7 +623,7 @@
     },
     {
         "id": "toppertorta3",
-        "name": "Topper Snoopy",
+        "name": "Snoopy",
         "category": "varios",
         "subcategory": "toppers",
         "image": "/images/products/TopperTorta3.jpeg",
@@ -632,7 +632,7 @@
     },
     {
         "id": "toppertorta4",
-        "name": "Topper Unicornio y Arcoiris",
+        "name": "Unicornio y Arcoiris",
         "category": "varios",
         "subcategory": "toppers",
         "image": "/images/products/TopperTorta4.jpeg",

@@ -28,7 +28,7 @@ export default function Page() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const productsPerPage = isMobile ? 2 : 4;
+  const productsPerPage = isMobile ? 2 : 6;
 
   useEffect(() => {
     fetch('/data/products.json')
@@ -174,7 +174,7 @@ export default function Page() {
                 </div>
               )}
               
-              <div className="min-h-[300px]">
+              <div className="flex flex-col min-h-[200px] sm:min-h-[300px]">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {currentProducts.map(product => (
                   <ProductCard
