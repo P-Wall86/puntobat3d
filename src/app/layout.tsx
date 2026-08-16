@@ -32,7 +32,7 @@ export const metadata = {
     siteName: 'Punto BAT 3D',
     images: [
       {
-        url: '/images/logo/LogoColor.png',
+        url: '/images/logo/puntobat3d.png',
         width: 800,
         height: 600,
         alt: 'Punto BAT 3D',
