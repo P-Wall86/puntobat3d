@@ -45,7 +45,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Punto BAT 3D - Impresión 3D Personalizada',
     description: 'Tienda de impresión 3D con productos personalizados: mates, llaveros, figuras, carteles y más.',
-    images: ['/images/logo/LogoColor.png'],
+    images: ['/images/logo/puntobat3d.png'],
   },
 };
 
