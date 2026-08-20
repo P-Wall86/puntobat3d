@@ -19,10 +19,10 @@ export default function Footer() {
                         </p>
                         <div className="flex gap-4">
                             <a href="https://www.facebook.com/puntobatar" target="_blank" rel="noopener noreferrer">
-                                <img src="/images/socials/facebook.svg" alt="Facebook" className="w-6 h-6 opacity-70 hover:opacity-100 hover:scale-110 invert transition"/>
+                                <img src="/images/socials/facebook.svg" alt="Facebook" className="w-6 h-6 opacity-70 hover:opacity-100 hover:scale-110 invert transition" />
                             </a>
                             <a href="https://www.instagram.com/puntobat_3d" target="_blank" rel="noopener noreferrer">
-                                <img src="/images/socials/instagram.svg" alt="Instagram" className="w-6 h-6 opacity-70 hover:opacity-100 hover:scale-110 invert transition"/>
+                                <img src="/images/socials/instagram.svg" alt="Instagram" className="w-6 h-6 opacity-70 hover:opacity-100 hover:scale-110 invert transition" />
                             </a>
                         </div>
                     </div>
@@ -31,6 +31,17 @@ export default function Footer() {
                 <div className="mt-10 border-t border-white/10 pt-6 text-center">
                     <p className="text-xs tracking-normal font-light text-slate-300">
                         © {new Date().getFullYear()} Punto BAT 3D · Todos los derechos reservados
+                    </p>
+                    <p className="mt-2 text-[10px] tracking-normal font-light text-white/40">
+                        Desarrollo web por{" "}
+                        <a
+                            href="https://www.instagram.com/pame.wall/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-white/70 hover:text-[#2cb7c9] transition font-medium tracking-widest"
+                        >
+                            W • A • L • L
+                        </a>
                     </p>
                 </div>
             </div>
