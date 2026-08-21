@@ -3,12 +3,12 @@
 Sitio web tipo ecommerce desarrollado para Punto BAT 3D, un emprendimiento de impresión 3D que ofrece productos personalizados como mates, llaveros, figuras, carteles, organizadores y más.
 El sitio permite navegar por productos en categorías y subcategorías, agregar productos a un carrito de consulta y enviar la selección por WhatsApp.
 
-🌐 **Demo**  
+## **Demo**  
 https://puntobat3d.netlify.app
 
 ---
 
-## 📌 Características
+## Características
 
 - Diseño responsive adaptado a desktop, tablet y mobile.
 - Navegación por categorías: Mates, Llaveros, Figuras, Organizadores y Varios.
@@ -25,7 +25,7 @@ https://puntobat3d.netlify.app
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - **Next.js 15** (App Router)
 - **TypeScript**
@@ -36,7 +36,7 @@ https://puntobat3d.netlify.app
 
 ---
 
-## 📂 Estructura del proyecto
+## Estructura del proyecto
 ```
 /
 ├── public/
