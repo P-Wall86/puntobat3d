@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Punto BAT 3D – Ecommerce de impresión 3D
 
-## Getting Started
+Sitio web tipo ecommerce desarrollado para Punto BAT 3D, un emprendimiento de impresión 3D que ofrece productos personalizados como mates, llaveros, figuras, carteles, organizadores y más.
+El sitio permite navegar por productos en categorías y subcategorías, agregar productos a un carrito de consulta y enviar la selección por WhatsApp.
 
-First, run the development server:
+🌐 **Demo**  
+https://puntobat3d.netlify.app
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 📌 Características
+
+- Diseño responsive adaptado a desktop, tablet y mobile.
+- Navegación por categorías: Mates, Llaveros, Figuras, Organizadores y Varios.
+- Subcategorías dentro de "Varios": Fiestas, Carteles, Toppers y Otros.
+- Filtros de subcategoría en el frontend (sin recarga de página).
+- Paginación por categoría (4 productos en mobile, 6 en desktop).
+- Modal de producto con imagen, descripción y botón de selección.
+- Carrito de consulta (preview modal) que agrupa los productos seleccionados por categoría.
+- Envío de consulta por WhatsApp con mensaje estructurado.
+- Carrusel de promociones.
+- Botón flotante de WhatsApp.
+- Botón "volver arriba".
+- Animaciones y transiciones CSS.
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+- **Next.js 15** (App Router)
+- **TypeScript**
+- **React 19**
+- **Tailwind CSS**
+- **Google Fonts** (Arial Rounded, vía local)
+- **Netlify** (deploy)
+
+---
+
+## 📂 Estructura del proyecto
+```
+/
+├── public/
+│   ├── data/
+│   │   └── products.json
+│   └── images/
+│       ├── products/
+│       ├── logo/
+│       ├── banners/
+│       └── hero/
+├── src/
+│   ├── app/
+│   │   ├── page.tsx
+│   │   ├── layout.tsx
+│   │   └── globals.css
+│   ├── components/
+│   │   ├── ProductCard.tsx
+│   │   ├── ProductModal.tsx
+│   │   ├── PreviewModal.tsx
+│   │   ├── WhatsAppButton.tsx
+│   │   ├── PromoCarousel.tsx
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   └── BackToTop.tsx
+│   └── types/
+│       └── products.ts
+├── README.md
+├── package.json
+├── package-lock.json
+├── next.config.ts
+├── tsconfig.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Diseño responsive
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+La interfaz se adapta según el dispositivo:
 
-## Learn More
+**Desktop**
+- Nav en una sola fila.
+- Grid de 4 columnas.
+- 6 productos por página.
 
-To learn more about Next.js, take a look at the following resources:
+**Tablet**
+- Ajuste de grillas y espaciados.
+- Nav en una sola fila.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Mobile**
+- Nav en dos filas.
+- Grid de 2 columnas.
+- 2 productos por página.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
+## Gestión de productos (importante)
 
-## Deploy on Vercel
+Los productos se cargan del archivo `public/data/products.json`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Estructura de cada producto:**
+```
+{
+  "id": "identificador-unico",
+  "name": "Nombre del producto",
+  "category": "mates | llaveros | figuras | organizadores | varios",
+  "subcategory": "fiestas | carteles | toppers | otros", // solo para "varios"
+  "image": "/images/products/nombre-de-la-imagen.jpeg",
+  "alt": "Texto alternativo",
+  "description": "Descripción del producto"
+}
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Para agregar o modificar un producto:
+1. Editar el archivo products.json.
+2. Agregar o reemplazar la imagen en public/images/products/.
+3. La ruta de la imagen debe ser relativa al dominio.
+
+## Deploy
+El proyecto se encuentra desplegado en:
+https://puntobat3d.com.ar
+
+## Objetivo del proyecto
+Crear una tienda online funcional y visualmente atractiva para Punto BAT 3D, que facilite la exploración de productos y la comunicación con clientes potenciales a través de WhatsApp.
+
+## Autor
+[Pamela Pared](https://instagram.com/pame.wall)
