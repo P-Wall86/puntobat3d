@@ -31,7 +31,7 @@ export default function Page() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const productsPerPage = isMobile ? 2 : 6;
+  const productsPerPage = isMobile ? 2 : 8;
 
   useEffect(() => {
     fetch('/data/products.json')
