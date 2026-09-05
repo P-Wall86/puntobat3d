@@ -24,6 +24,14 @@
         "description": "Mate personalizado con tu diseño o logo de tu empresa. Incluye inserto interior y soporta agua fría y caliente."
     },
     {
+        "id": "mateempresa1",
+        "name": "Geométrico empresarial",
+        "category": "mates",
+        "image": "/images/products/MateEmpresa1.jpeg",
+        "alt": "Mate geometrico con logo",
+        "description": "Mate personalizado con tu diseño o logo de tu empresa. Incluye inserto interior y soporta agua fría y caliente."
+    },
+    {
         "id": "mateempresa2",
         "name": "Geométrico empresarial",
         "category": "mates",
