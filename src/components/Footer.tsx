@@ -32,19 +32,19 @@ export default function Footer() {
                     <p className="text-xs tracking-normal font-light text-slate-300">
                         © {new Date().getFullYear()} Punto BAT 3D · Todos los derechos reservados
                     </p>
-                    <p className="mt-2 text-[10px] tracking-normal font-light text-white/40">
-                        Desarrollo web por{" "}
-                        <a
-                            href="https://www.instagram.com/pame.wall/"
+                    <div className="mt-3">
+                        <a href="https://www.instagram.com/pame.wall/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-white/70 hover:text-[#2cb7c9] transition font-medium tracking-widest"
-                        >
+                            className="text-xs text-white/75 hover:text-[#2cb7c9] transition-colors font-medium tracking-widest">
                             W • A • L • L
                         </a>
-                    </p>
+                        <p className="mt-1 text-[11px] tracking-normal font-light text-white/50">
+                            Built to serve
+                        </p>
+                    </div>
                 </div>
             </div>
-        </footer>
+        </footer >
     );
 }
