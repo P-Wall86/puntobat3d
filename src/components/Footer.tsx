@@ -33,7 +33,7 @@ export default function Footer() {
                         © {new Date().getFullYear()} Punto BAT 3D · Todos los derechos reservados
                     </p>
                     <div className="mt-3">
-                        <a href="https://www.instagram.com/pame.wall/"
+                        <a href="https://buildtoserve.vercel.app"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-xs text-white/75 hover:text-[#2cb7c9] transition-colors font-medium tracking-widest">
